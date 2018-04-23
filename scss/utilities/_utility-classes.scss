@@ -1,0 +1,173 @@
+.clearfix {
+	@include clearfix();
+}
+
+.hidden {
+	@include hide();
+}
+
+.show {
+	@include show();
+}
+
+/*
+ * Hidden Breakpoints
+ */
+
+// Hidden Extra Large
+.hidden-xl {
+	@media #{$xlarge} {
+		@include hide();
+	}
+}
+
+// Hidden Large
+.hidden-lg {
+	@media #{$large} {
+		@include hide();
+	}
+}
+
+.hidden-lg-up {
+	@media #{$large-up} {
+		@include hide();
+	}
+}
+
+.hidden-lg-down {
+	@media #{$large-down} {
+		@include hide();
+	}
+}
+
+// Hidden Medium
+.hidden-md {
+	@media #{$medium} {
+		@include hide();
+	}
+}
+
+.hidden-md-up {
+	@media #{$medium-up} {
+		@include hide();
+	}
+}
+
+.hidden-md-down {
+	@media #{$medium-down} {
+		@include hide();
+	}
+}
+
+// Hidden Small
+.hidden-sm {
+	@media #{$small} {
+		@include hide();
+	}
+}
+
+.hidden-sm-up {
+	@media #{$small-up} {
+		@include hide();
+	}
+}
+
+.hidden-sm-down {
+	@media #{$small-down} {
+		@include hide();
+	}
+}
+
+// Hidden Extra Small
+.hidden-xs {
+	@media #{$xsmall} {
+		@include hide();
+	}
+}
+
+
+/*
+ * Visible Breakpoints
+ */
+
+//Visible Extra Large
+.visible-xl {
+	@include hide();
+	@media #{$xlarge} {
+		@include show();
+	}
+}
+
+//Visible Large
+.visible-lg {
+	@include hide();
+	@media #{$large} {
+		@include show();
+	}
+}
+
+.visible-lg-up {
+	@include hide();
+	@media #{$large-up} {
+		@include show();
+	}
+}
+
+.visible-lg-down {
+	@include hide();
+	@media #{$large-down} {
+		@include show();
+	}
+}
+
+//Visible Medium
+.visible-md {
+	@include hide();
+	@media #{$medium} {
+		@include show();
+	}
+}
+
+.visible-md-up {
+	@include hide();
+	@media #{$medium-up} {
+		@include show();
+	}
+}
+
+.visible-md-down {
+	@include hide();
+	@media #{$medium-down} {
+		@include show();
+	}
+}
+
+//Visible Small
+.visible-sm {
+	@include hide();
+	@media #{$small} {
+		@include show();
+	}
+}
+
+.visible-sm-up {
+	@include hide();
+	@media #{$small-up} {
+		@include show();
+	}
+}
+
+.visible-sm-down {
+	@include hide();
+	@media #{$small-down} {
+		@include show();
+	}
+}
+
+//Visible Extra Small
+.visible-xs {
+	@include hide();
+	@media #{$xsmall} {
+		@include show();
+	}
+}

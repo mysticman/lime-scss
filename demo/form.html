@@ -1,0 +1,544 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Form | Lime SCSS Framework</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="./lime.css">
+    <style>
+        body {
+            font-family: 'Yantramanav', sans-serif;
+            font-size: 16px;
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin: 2.4rem 0 1rem 0;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin: 3rem 0 1rem 0;
+            color: gray;
+        }
+        
+        .docs-grid-item {
+            padding: 1rem;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+            background: #ddd;
+        }
+        
+        .docs-grid-item .docs-grid-item {
+            margin-bottom: 0;
+            color: #fff;
+            background: #555;
+        }
+        
+        pre {
+            display: flex;
+            margin: 1rem 0;
+            padding: 1rem;
+            color: #555;
+            background: #fafafc;
+            border: 1px solid #ddd;
+        }
+        
+        pre code {
+            display: flex;
+            font-size: 14px;
+        }
+        
+        pre code.columns {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        pre code div {
+            font-size: 14px;
+        }
+        
+        .tab-spacer {
+            display: inline-block;
+            width: 2rem;
+            height: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<section class="navigation-section">
+        <a href="/" class="brand-logo">
+            <img src="lime-logo.svg" alt="Lime SCSS Framework">
+        </a>
+        <input class="mobile-navigation" type="checkbox" />
+        <nav class="main-navigation">
+            <a href="index.html">
+                Grid
+            </a>
+            <a href="buttons.html">
+                Buttons
+            </a>
+            <a class="active" href="form.html">
+                Form
+            </a>
+            <a href="typo.html">
+                Typo
+            </a>
+            <a href="image.html">
+                Image
+            </a>
+            <a href="table.html">
+                Table
+            </a>
+            <a href="utilities.html">
+                Utilities
+            </a>
+            <a href="callout.html">
+                Callout
+            </a>
+        </nav>
+    </section>
+
+    <!--Form-->
+    <div class="container">
+        <h1>Form</h1>
+
+        <h2>Simple Form</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="form-simple-email">Email</label>
+                <input type="email" id="form-simple-email" placeholder="Enter Email" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="form-simple-password">Password</label>
+                <input type="password" id="form-simple-password" placeholder="Enter Password" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">I agree to checking this checkbox</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <h2>Multi-Column Form</h2>
+
+        <form>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-1-2">
+                        <label for="mc-first-name">First Name</label>
+                        <input type="text" id="mc-first-name" placeholder="Enter First Name">
+                    </div>
+                    <div class="col-md-1-2">
+                        <label for="mc-last-name">Last Name</label>
+                        <input type="text" id="mc-last-name" placeholder="Enter Last Name">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-1-2">
+                        <label for="mc-first-name">First Name</label>
+                        <input type="text" id="mc-first-name" placeholder="Enter First Name">
+                    </div>
+                    <div class="col-md-1-2">
+                        <label for="mc-last-name">Last Name</label>
+                        <input type="text" id="mc-last-name" placeholder="Enter Last Name">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <h2>Horizontal form sample</h2>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-md-1-4" for="h-first-name">First Name</label>
+                <div class="col-md-3-4">
+                    <input type="text" id="h-first-name" placeholder="Enter First Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-1-4" for="h-last-name">Last Name</label>
+                <div class="col-md-3-4">
+                    <input type="text" id="h-last-name" placeholder="Enter Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-1-4" for="h-email">Email</label>
+                <div class="col-md-3-4">
+                    <input type="email" id="h-email" placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-1-4" for="h-password">Password</label>
+                <div class="col-md-3-4">
+                    <input type="password" id="h-password" placeholder="Enter Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3-4 col-md-offset-1-4">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </form>
+
+        <h2>Vetical form messages</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="fm1-title">Title</label>
+                <input type="text" id="fm1-title" placeholder="Title" value="Some data">
+                <p class="form-message">Form message</p>
+            </div>
+
+            <div class="form-group">
+                <label for="fm1-first-name">First Name</label>
+                <input type="text" id="fm1-first-name" placeholder="Enter First Name" class="success" value="Some data">
+                <p class="form-message msg-success">Form message success</p>
+            </div>
+
+            <div class="form-group">
+                <label for="fm1-last-name">Last Name</label>
+                <input type="text" id="fm1-last-name" placeholder="Enter Last Name" class="error" value="Some data">
+                <p class="form-message msg-error">Form message error</p>
+            </div>
+
+            <div class="form-group">
+                <label for="fm2-first-name">First Name</label>
+                <input type="text" id="fm2-first-name" placeholder="Enter First Name" class="warning" value="Some data">
+                <p class="form-message msg-warning">Form message success</p>
+            </div>
+
+            <div class="form-group">
+                <label for="fm2-last-name">Last Name</label>
+                <input type="text" id="fm2-last-name" placeholder="Enter Last Name" class="info" value="Some data">
+                <p class="form-message msg-info">Form message error</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <h2>Horizontal form messages</h2>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-md-1-4" for="h1-first-name">First Name</label>
+                <div class="col-md-3-4">
+                    <input type="text" id="h1-first-name" placeholder="Enter First Name" class="success" value="Some value">
+                    <p class="form-message msg-success">Form message success</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-1-4" for="h1-last-name">Last Name</label>
+                <div class="col-md-3-4">
+                    <input type="text" id="h1-last-name" placeholder="Enter Last Name" class="error" value="Some value">
+                    <p class="form-message msg-error">Form message error</p>
+                </div>
+            </div>
+            <div class="col-md-3-4 col-md-offset-1-4">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+
+        <!-- <h2>Input groups</h2>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-md-1-4" for="h1-first-name">First Name</label>
+                <div class="col-md-3-4">
+                    <div class="input-group">
+                        <input type="text" placeholder="Enter Keyword..." class="success">
+                        <span class="input-group-addon">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-1-4" for="h1-last-name">Last Name</label>
+                    <div class="col-md-3-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <button type="button" class="btn btn-icon btn-primary btn-icon-left">
+                                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                                    Some text
+                                </button>
+                            </span>
+                            <input type="text" placeholder="Enter Keyword..." class="error">
+                        </div>
+                        <p class="form-message msg-error">Form message error</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-1-4" for="h1-email">Email</label>
+                    <div class="col-md-3-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-address-book" aria-hidden="true"></i>
+                            </span>
+                            <input type="text" placeholder="Enter Keyword...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-1-4" for="h1-password">Password</label>
+                    <div class="col-md-3-4">
+                        <input type="password" id="h1-password" placeholder="Enter Password" value="Some value">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn-success">Submit</button>
+        </form> -->
+
+        <h2>Select</h2>
+        <form role="form">
+            <div class="form-group">
+                <label class="select">
+                    <select>
+                        <option>Select Field</option>
+                        <option value="1">Option 01</option>
+                        <option value="2">Option 02</option>
+                    </select>
+                </label>
+            </div>
+        </form>
+
+        <h2>Checkbox inline in form</h2>
+        <div class="row">
+            <div class="col-md-1-2">
+                <form>
+                    <div class="form-group">
+                        <input type="checkbox">
+                        <label>Checkbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" checked>
+                        <label>Checkbox checked</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" disabled>
+                        <label>Checkbox disabled</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" checked disabled>
+                        <label>Checkbox disabled checked</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1-2">
+                <form>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in">
+                        <label>Checkbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" checked>
+                        <label>Checkbox checked</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox"  class="filled-in" disabled>
+                        <label>Checkbox disabled</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" checked disabled>
+                        <label>Checkbox disabled checked</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h2>Checkbox inline NO form</h2>
+        <div class="row">
+            <div class="col-md-1-2">
+                <ul class="list-inline">
+                    <li>
+                        <input type="checkbox">
+                        <label>Checkbox</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <label>Checkbox checked</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" disabled>
+                        <label>Checkbox disabled</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked disabled>
+                        <label>Checkbox disabled checked</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Checkbox block</h2>
+        <div class="row">
+            <div class="col-md-1-2">
+                <form>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox111">
+                        <label for="checkbox111">Classic checkbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox2" checked>
+                        <label for="checkbox2">Classic checkbox checked</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox3" disabled>
+                        <label for="checkbox3">Classic checkbox disabled</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox4" checked disabled>
+                        <label for="checkbox4">Classic checkbox disabled checked</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1-2">
+                <form>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" id="checkbox11">
+                        <label for="checkbox11">Classic checkbox</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" id="checkbox21" checked>
+                        <label for="checkbox21">Classic checkbox checked</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" id="checkbox31" disabled>
+                        <label for="checkbox31">Classic checkbox disabled</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="filled-in" id="checkbox41" checked disabled>
+                        <label for="checkbox41">Classic checkbox disabled checked</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h2>Radio buttons</h2>
+        <!--<div class="row">
+            <div class="col-md-1-2">
+                <form>
+                    <div>
+                        <input type="radio" class="with-gap" id="radio-1" name="room-1-options">
+                        <label for="radio-1">Option 1</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="with-gap" id="radio-2" checked name="room-1-options">
+                        <label for="radio-2">Option 2</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="with-gap" id="radio-3" disabled name="room-2-options">
+                        <label for="adio-3">Option 1</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="with-gap" id="radio-4" disabled checked name="room-2-options">
+                        <label for="radio-4">Option 2</label>
+                    </div>
+                </form>
+            </div>
+        </div>-->
+
+        <div class="row">
+            <div class="col-md-1-2">
+                <form>
+                    <div class="form-group">
+                        <input type="radio" id="radio-11" name="room-11-options">
+                        <label for="radio-11">Option 1</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" id="radio-21" checked name="room-11-options">
+                        <label for="radio-21">Option 2</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" id="radio-31" disabled name="room-22-options">
+                        <label for="adio-31">Option 1</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" id="radio-41" disabled checked name="room-22-options">
+                        <label for="radio-41">Option 2</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h2>Form variations</h2>
+        <div class="row">
+            <div class="col-md-1">
+                <form>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-1-4">
+                                <label class="select">
+                                    <select id="select111">
+                                        <option>Select Field</option>
+                                        <option value="1">Option 01</option>
+                                        <option value="2">Option 02</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-md-1-4">
+                                <input type="text" id="fm1-title" placeholder="Title" value="Some data">
+                            </div>
+                            <div class="col-md-1-4">
+                                <input type="checkbox" class="filled-in" id="checkbox411" checked>
+                                <label for="checkbox411">Checkbox selected</label>
+                            </div>
+                            <div class="col-md-1-4">
+                                <button class="btn-primary">Button</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>

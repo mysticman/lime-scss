@@ -1,0 +1,162 @@
+/*
+ * Definitions
+ */
+
+// Input
+$input-padding-vertical:			10px !default;
+$input-padding-horizontal:			15px !default;
+$input-padding:						$input-padding-vertical $input-padding-horizontal !default;
+$input-color: 						$text-color !default;
+$input-font-family: 				$font-family !default;
+$input-font-weight: 				$regular-font-weight !default;
+$input-font-size: 					$font-size-medium !default;
+$input-line-height: 				$line-height-medium !default;
+$input-background: 					#fff !default;
+$input-border-size:					1px !default;
+$input-border: 						$input-border-size solid $gray-light !default;
+$input-border-radius: 				$border-radius !default;
+
+// Input Hover
+$input-hover-color: 				$input-color !default;
+$input-hover-background: 			darken($input-background, 2%) !default;
+$input-hover-border: 				1px solid darken($gray-light, 10%) !default;
+
+// Input Focus
+$input-focus-color: 				$input-color !default;
+$input-focus-background: 			darken($input-background, 2%) !default;
+$input-focus-border: 				1px solid $brand-info !default;
+
+// Input Placeholder
+$input-placeholder-font-family: 	$input-font-family !default;
+$input-placeholder-font-size: 		$input-font-size !default;
+$input-placeholder-color: 			fade($input-color, 50%) !default;
+$input-placeholder-line-height: 	$input-line-height !default;
+$input-placeholder-letter-spacing: 	0 !default;
+$input-placeholder-text-transform: 	none !default;
+
+// Input Indicators
+$input-error-color: 				$brand-error !default;
+$input-warning-color: 				$brand-warning !default;
+$input-success-color: 				$brand-success !default;
+$input-info-color: 					$brand-info !default;
+
+// Input Disabled
+$input-disabled-color: 				$gray-light !default;
+$input-disabled-background: 		$gray-light !default;
+$input-disabled-border: 			1px solid darken($gray-light, 10%) !default;
+
+// Input Search
+$input-search-border-radius: 		0 !default;
+
+// Textarea
+$textarea-padding: 					$padding-small !default;
+$textarea-line-height: 				$line-height-medium !default;
+
+/*
+ * Input
+ */
+
+input,
+textarea {
+	@include input();
+
+	@include appearance(none);
+
+	// Override Normalise for Input Types
+	@include box-sizing(border-box);
+
+	// Input Size
+	@include input-size($input-padding, $input-font-size);
+
+	// Input Style
+	@include input-style($input-color, $input-background, $input-border);
+
+	// Input Placeholder
+	// @include placeholder($input-placeholder-color, $input-placeholder-font-size, $input-placeholder-font-family, $input-placeholder-letter-spacing, $input-placeholder-text-transform);
+
+	&:hover {
+		@include input-style($input-hover-color, $input-hover-background, $input-hover-border);
+	}
+
+	&:focus {
+		@include input-style($input-focus-color, $input-focus-background, $input-focus-border);
+	}
+
+	// Input Disabled
+	&:disabled {
+		cursor: no-drop;
+		@include input-style($input-disabled-color, $input-disabled-background, $input-disabled-border);
+	}
+}
+
+/*
+ * Input Indicators 
+ */
+
+input,
+textarea {
+
+	// Input Error
+	&.error {
+		@include input-indicator($input-error-color);
+	}
+	
+	// Input Warning
+	&.warning {
+		@include input-indicator($input-warning-color);
+	}
+	
+	// Input Success
+	&.success {
+		@include input-indicator($input-success-color);
+	}
+	
+	// Input Info
+	&.info {
+		@include input-indicator($input-info-color);
+	}
+}
+
+
+/*
+ * Textarea
+ */
+
+textarea {
+	max-width: 100%;
+	@include transition("color ${transition-fast} ease-in-out, background ${transition-fast} ease-in-out, border ${transition-fast} ease-in-out");
+}
+
+/*
+ * Input Styles
+ */
+
+
+/*
+ * Input Search
+ */
+
+// Input Search
+input[type="search"] {
+	border-radius: $input-search-border-radius;
+	-webkit-appearance: none;
+
+	// Override Normalise for Input Types
+	@include box-sizing(border-box);
+}
+
+
+/*
+ * Input File
+ */
+
+// Input File
+input[type="file"] {
+	padding: 0;
+	height: auto;
+	background: transparent;
+	border: none;
+
+	// Override Normalise for Input Types
+	@include box-sizing(border-box);
+}

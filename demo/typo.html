@@ -1,0 +1,226 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Button | Lime SCSS Framework</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="./lime.css">
+
+</head>
+
+<body>
+
+    <style>
+        body {
+            font-family: 'Yantramanav', sans-serif;
+            font-size: 16px;
+        }
+        
+        h1.page-title {
+            font-size: 2em;
+            margin: 2.4rem 0 1rem 0;
+        }
+        
+        h2.sub-title {
+            font-size: 1.8em;
+            margin: 3rem 0 1rem 0;
+            color: gray;
+        }
+
+        h3.sub-sub-title {
+            font-size: 1.4em;
+            margin: 2rem 0 1rem 0.5rem;
+            color: gray;
+        }
+
+        .docs-grid-item {
+            padding: 1rem;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+            background: #ddd;
+        }
+        
+        .docs-grid-item .docs-grid-item {
+            margin-bottom: 0;
+            color: #fff;
+            background: #555;
+        }
+        
+        pre {
+            display: flex;
+            margin: 1rem 0;
+            padding: 1rem;
+            color: #555;
+            background: #fafafc;
+            border: 1px solid #ddd;
+        }
+        
+        pre code {
+            display: flex;
+            font-size: 14px;
+        }
+        
+        pre code.columns {
+            display: flex;
+            flex-direction: column;
+        }
+        pre code div{
+            font-size: 14px;
+        }
+        .tab-spacer {
+            display: inline-block;
+            width: 2rem;
+            height: 1rem;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+    </style>
+
+
+    <section class="navigation-section">
+        <a href="/" class="brand-logo">
+            <img src="lime-logo.svg" alt="Lime SCSS Framework">
+        </a>
+        <input class="mobile-navigation" type="checkbox" />
+        <nav class="main-navigation">
+            <a href="index.html">
+                Grid
+            </a>
+            <a href="buttons.html">
+                Buttons
+            </a>
+            <a href="form.html">
+                Form
+            </a>
+            <a class="active" href="typo.html">
+                Typo
+            </a>
+            <a href="image.html">
+                Image
+            </a>
+            <a href="table.html">
+                Table
+            </a>
+            <a href="utilities.html">
+                Utilities
+            </a>
+            <a href="callout.html">
+                Callout
+            </a>
+        </nav>
+    </section>
+    
+
+    <div class="container">
+        <h1 class="page-title">Typography</h1>
+        
+        
+        <h2 class="sub-title">Headings</h2>
+        <p>
+            The heading font size is not defined at all, it should depend on the HTML markup and the design brand guideline.
+        </p>
+
+
+        <h2 class="sub-title">Horizontal rule</h2>
+        <hr>
+
+        <h2 class="sub-title">Link</h2>
+        <a href="#">Some link</a>
+
+        <h2 class="sub-title">List</h2>
+
+        <h3 class="sub-sub-title">Simple block list</h3>
+        <ul>
+            <li>Headings</li>
+            <li>Hr</li>
+            <li>Link</li>
+            <li>Paragraph</li>
+        </ul>
+
+        <h3 class="sub-sub-title">Simple styled list</h3>
+        <ul class="list-styled">
+            <li>Headings</li>
+            <li>Hr</li>
+            <li>Link</li>
+            <li>Paragraph</li>
+        </ul>
+
+        <h3 class="sub-sub-title">UNStyled list</h3>
+        <ul class="list-unstyled">
+            <li>Headings</li>
+            <li>Hr</li>
+            <li>Link</li>
+            <li>Paragraph</li>
+        </ul>
+
+        <h3 class="sub-sub-title">List inline</h3>
+        <ul class="list-inline">
+            <li>Headings</li>
+            <li>Hr</li>
+            <li>Link</li>
+            <li>Paragraph</li>
+        </ul>
+
+        <h3 class="sub-sub-title">Nested list</h3>
+        <ul class="list-styled">
+            <li>Headings</li>
+            <li>Hr</li>
+            <li>
+                Something
+                <ul class="list-styled">
+                    <li>Headings</li>
+                    <li>Hr</li>
+                    <li>Link</li>
+                    <li>Paragraph</li>
+                </ul>
+            </li>
+            <li>Paragraph</li>
+        </ul>
+
+        <h2 class="sub-title">Paragraph</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        </p>
+
+        <h2 class="sub-title">Strong, bold</h2>
+        <b>This is strong</b> This is also <strong>strong.</strong>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur <b>adipiscing elit</b>, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        </p>
+    </div>
+</body>
+
+</html>

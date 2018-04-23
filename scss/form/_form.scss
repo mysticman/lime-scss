@@ -1,0 +1,90 @@
+/*
+ * Definitions
+ */
+
+// Label
+
+$label-height-compensation:		$input-border-size;
+$label-margin:					$input-padding-vertical + $label-height-compensation + 1 0!default;		//+1 because of input height size difference
+$label-font-family: 			$font-family !default;
+$label-font-weight: 			$regular-font-weight !default;
+$label-font-size: 				$font-size-medium !default;
+$label-color: 					$text-color !default;
+$label-line-height: 			$line-height-medium !default;
+
+// Form Message
+$form-message-margin: 			5px 0 0 0 !default;
+$form-message-font-size: 		$font-size-small !default;
+$form-message-color: 			$text-color !default;
+
+// Form Message Indicators
+$form-message-error-color: 		$brand-error !default;
+$form-message-warning-color: 	$brand-warning !default;
+$form-message-success-color: 	$brand-success !default;
+$form-message-info-color: 		$brand-info !default;
+
+$form-input-height:				$input-padding-vertical * 2 + $input-border-size * 2  + 16px;
+
+
+form{
+	.form-group{
+		margin: 0 $gutter-compensation $margin-medium;
+		padding: 0 $gutter-compensation * -1;
+	}
+	label {
+		display: block;
+		margin: $label-margin;
+		font-family: $label-font-family;
+		font-weight: $label-font-weight;
+		@include font-size($label-font-size);
+		color: $label-color;
+	}
+}
+
+.form-horizontal{
+    .form-group{
+		display: flex;
+        align-items: flex-start;
+		margin-bottom: $margin-medium;
+		@include clearfix();
+    }
+    label[for]{
+		text-align: right;
+		margin: $label-margin;
+	}
+	input,
+	textarea{
+		height: $form-input-height;
+		// margin:0;
+	}
+	.input-group{
+		margin:0;
+	}
+}
+
+// Form Message
+.form-message {
+	margin: $form-message-margin;
+	@include font-size($form-message-font-size);
+	color: $form-message-color;
+	
+	// Error
+	&.msg-error {
+		color: $form-message-error-color;
+	}
+
+	// Warning
+	&.msg-warning {
+		color: $form-message-warning-color;
+	}
+	
+	// Success
+	&.msg-success {
+		color: $form-message-success-color;
+	}
+	
+	// Info
+	&.msg-info {
+		color: $form-message-info-color;
+	}
+}

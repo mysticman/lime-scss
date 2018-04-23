@@ -1,0 +1,151 @@
+/*
+ * Definitions
+ */
+
+// Spacing
+$table-cell-padding: 	    $padding-small !default;
+$table-sm-cell-padding:   $padding-xsmall !default;
+
+$table-bottom-spacer: 	  $margin-small !default;
+
+// Colors
+$table-border-color: 	    $gray-light !default;
+$table-bg-accent: 		    $gray-lighter !default;
+$table-bg-hover:		      $gray-lighter !default;
+
+$table-bg-active:         $brand-primary !default;
+$state-success-bg:        $brand-success !default;
+$state-info-bg:           $brand-info !default;
+$state-warning-bg:        $brand-warning !default;
+$state-error-bg:          $brand-error !default;
+
+$state-opacity:           0.2 !default;
+
+// Border
+$table-border-width: 	    1px !default;
+$table-th-border-top:     0 !default;
+
+$table-th-text-align:     left !default;
+$table-th-font-weight:    500 !default;
+
+
+//
+// Basic Bootstrap table
+//
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $table-bottom-spacer;
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-top: $table-th-border-top;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    text-align: $table-th-text-align;
+    font-weight: $table-th-font-weight;
+  }
+
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  .table {
+    background-color: $body-bg;
+  }
+}
+
+
+//
+// Condensed table w/ half padding
+//
+
+.table-sm {
+  th,
+  td {
+    padding: $table-sm-cell-padding;
+  }
+}
+
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $table-border-width);
+    }
+  }
+}
+
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    background-color: $table-bg-accent;
+  }
+}
+
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.table-hover {
+  tbody tr {
+    @include hover {
+      background-color: $table-bg-hover;
+    }
+  }
+}
+
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+// Generate the contextual variants
+@include table-row-variant(active, rgba($table-bg-active, $state-opacity));
+@include table-row-variant(success, rgba($state-success-bg, $state-opacity));
+@include table-row-variant(info, rgba($state-info-bg, $state-opacity));
+@include table-row-variant(warning, rgba($state-warning-bg, $state-opacity));
+@include table-row-variant(error, rgba($state-error-bg, $state-opacity));
+
+
+// Responsive tables
+//
+// Add `.table-responsive` to `.table`s and we'll make them mobile friendly by
+// enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+
+  // Prevent double border on horizontal scroll due to use of `display: block;`
+  &.table-bordered {
+    border: 0;
+  }
+}

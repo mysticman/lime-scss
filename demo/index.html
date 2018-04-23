@@ -1,0 +1,846 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Grid | Lime SCSS Framework</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="./lime.css">
+
+    <link rel="stylesheet" href="/lib/styles/default.css">
+    <link rel="stylesheet" href="/lib/styles/github.css">
+
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="/lib/highlight.pack.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+
+    <style>
+        body{
+            font-size: 16px;
+            font-family: 'Yantramanav', sans-serif;
+        }
+
+        .container-colored{
+            margin:40px auto;
+            padding: 20px 0;
+            background-color: #ddd;
+        }
+
+        h1{
+            font-size: 2em;
+            margin: 2.4rem 0 1rem 0;
+        }
+
+        .box-row{
+            position: relative;
+            box-sizing: border-box;
+            min-height: 1rem;
+            background: #007FFF;
+            border-radius: 3px;
+            overflow: hidden;
+            text-align: center;
+            color: #fff;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .box-row .box-row{
+            background: #06C;
+            margin-bottom: 0;
+        }
+        .box-row .box-row .box-row{
+            background: #036;
+            margin-bottom: 0;
+        }
+        .no-gutter .odd{
+            background: #036;
+        }
+        .no-gutter .box-row{
+            border-radius: 0;
+        }
+
+        .box-large{
+            height: 8rem;
+        }
+
+        .table-responsive table{
+            width:calc(100% - 40px);
+            border-collapse: collapse;
+            margin: 0 20px;
+        }
+
+        .table-responsive table td{
+            border:1px solid #313131;
+            padding: 5px;
+        }
+        .table-responsive table td.is-hidden{
+            color:gray;
+        }
+        .table-responsive table td.is-visible{
+            color:#06C;
+            font-weight: bold;
+        }
+
+        pre{
+            font-size: 0.9em;
+            line-height: 1.4em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="navigation-section">
+        <a href="/" class="brand-logo">
+            <img src="./lime-logo.svg" alt="Lime SCSS Framework">
+        </a>
+        <input class="mobile-navigation" type="checkbox" />
+        <nav class="main-navigation">
+            <a class="active" href="grid.html">
+                Grid
+            </a>
+            <a href="buttons.html">
+                Buttons
+            </a>
+            <a href="form.html">
+                Form
+            </a>
+            <a href="typo.html">
+                Typo
+            </a>
+            <a href="image.html">
+                Image
+            </a>
+            <a href="table.html">
+                Table
+            </a>
+            <a href="utilities.html">
+                Utilities
+            </a>
+            <a href="callout.html">
+                Callout
+            </a>
+        </nav>
+    </section>
+
+<div class="container">
+<h1>Fluid container</h1>
+<pre><code>
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-xs col-sm-1-2 col-md-1-2 col-lg-1-2&quot;&gt;
+                &lt;div class=&quot;box-row&quot;&gt;
+                    1-2
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs col-sm-1-2 col-md-1-2 col-lg-1-2&quot;&gt;
+                &lt;div class=&quot;box-row&quot;&gt;
+                    1-2
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-xs col-sm-1-3 col-md-1-3 col-lg-1-3&quot;&gt;
+                &lt;div class=&quot;box-row&quot;&gt;
+                    1-3
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs col-sm-1-3 col-md-1-3 col-lg-1-3&quot;&gt;
+                &lt;div class=&quot;box-row&quot;&gt;
+                    1-3
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-xs col-sm-1-3 col-md-1-3 col-lg-1-3&quot;&gt;
+                &lt;div class=&quot;box-row&quot;&gt;
+                    1-3
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+</div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                <div class="box-row">
+                    1-2
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                <div class="box-row">
+                    1-2
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                <div class="box-row">
+                    1-3
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                <div class="box-row">
+                    1-3
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                <div class="box-row">
+                    1-3
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="container">
+<h1>Container with cols</h1>
+<pre><code>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs col-sm-1-2 col-md-1-2 col-lg-1-2&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;
+            1-2
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs col-sm-1-2 col-md-1-2 col-lg-1-2&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;
+            1-2
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+    <div class="container container-colored">
+        <div class="row">
+            <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                <div class="box-row">
+                    1-2
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                <div class="box-row">
+                    1-2
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                <div class="box-row">
+                    1-3
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                <div class="box-row">
+                    1-3
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                <div class="box-row">
+                    1-3
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs col-sm-1-7 col-md-1-7 col-lg-1-7">
+                <div class="box-row">
+                    1-7
+                </div>
+            </div>
+            <div class="col-xs col-sm-5-7 col-md-5-7 col-lg-5-7">
+                <div class="box-row">
+                    5-7
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-7 col-md-1-7 col-lg-1-7">
+                <div class="box-row">
+                    1-7
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-2-5 col-md-2-5 col-lg-2-5">
+                <div class="box-row">
+                    2-5
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1-5 col-md-1-5 col-lg-1-5">
+                <div class="box-row">
+                    1-5
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-2-5 col-md-2-5 col-lg-2-5">
+                <div class="box-row">
+                    2-5
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+<h1>Container with cols and no gutter</h1>
+<pre><code>
+&lt;div class=&quot;row no-gutter&quot;&gt;
+    &lt;div class=&quot;col-xs col-sm-1-2 col-md-1-2 col-lg-1-2&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;
+            1-2
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs col-sm-1-2 col-md-1-2 col-lg-1-2&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;
+            1-2
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+    <div class="container container-colored">
+        <div class="row no-gutter">
+            <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                <div class="box-row odd">
+                    1-2
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                <div class="box-row">
+                    1-2
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutter">
+            <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                <div class="box-row">
+                    1-3
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                <div class="box-row odd">
+                    1-3
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                <div class="box-row">
+                    1-3
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h1>Nested grids</h1>
+    </div>
+
+    <div class="container container-colored">
+        <div class="row">
+            <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                <div class="box-row">
+                    <div class="row">
+                        <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                            <div class="box-row">
+                                <div class="row">
+                                    <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                                        <div class="box-row">
+                                            1-2
+                                        </div>
+                                    </div>
+                                    <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                                        <div class="box-row">
+                                            1-2
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                            <div class="box-row">
+                                1-3
+                            </div>
+                        </div>
+                        <div class="col-xs col-sm-1-3 col-md-1-3 col-lg-1-3">
+                            <div class="box-row">
+                                1-3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs col-sm-1-2 col-md-1-2 col-lg-1-2">
+                <div class="box-row">
+                    1-2
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container">
+<h1>Offset cols</h1>
+<pre><code>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-offset-1-12 col-xs-11-12&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;11-12&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-offset-2-11 col-xs-9-11&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;9-11&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+    <div class="container container-colored">
+        <div class="row">
+            <div class="col-xs-offset-1-12 col-xs-11-12">
+                <div class="box-row">11-12</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-2-11 col-xs-9-11">
+                <div class="box-row">9-11</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-3-10 col-xs-7-10">
+                <div class="box-row">7-10</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-4-9 col-xs-5-9">
+                <div class="box-row">5-9</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-5-8 col-xs-3-8">
+                <div class="box-row">3-8</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-6-7 col-xs-1-7">
+                <div class="box-row">1-7</div>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+<h1>Push cols</h1>
+<pre><code>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-push-1-12 col-xs-1-2&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;1-12 | 1-2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-push-1-3 col-xs-2-3&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;1-3 | 2-3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+    <div class="container container-colored">
+        <div class="row">
+            <div class="col-xs-push-1-12 col-xs-1-2">
+                <div class="box-row">1-12 | 1-2</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-push-1-3 col-xs-2-3">
+                <div class="box-row">1-3 | 2-3</div>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+<h1>Pull cols</h1>
+<pre><code>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-pull-1-12 col-xs-1-2&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;1-12 | 1-2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-pull-1-8 col-xs-1-2&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;1-8 | 1-2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+
+    <div class="container container-colored">
+        <h1>Pull cols</h1>
+        <div class="row">
+            <div class="col-xs-pull-1-12 col-xs-1-2">
+                <div class="box-row">1-12 | 1-2</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-pull-1-8 col-xs-1-2">
+                <div class="box-row">1-8 | 1-2</div>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+<h1>Alignments - horizontal</h1>
+<pre><code>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;
+            &lt;div class=&quot;row end-xs&quot;&gt;
+                &lt;div class=&quot;col-xs-1-2&quot;&gt;
+                    &lt;div class=&quot;box-row&quot;&gt;end&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+    <div class="container container-colored">
+        <div class="row">
+            <div class="col-xs">
+                <div class="box-row">
+                    <div class="row start-xs">
+                        <div class="col-xs-1-2">
+                            <div class="box-row">start</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs">
+                <div class="box-row">
+                    <div class="row center-xs">
+                        <div class="col-xs-1-2">
+                            <div class="box-row">center</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs">
+                <div class="box-row">
+                    <div class="row end-xs">
+                        <div class="col-xs-1-2">
+                            <div class="box-row">end</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container">
+<h1>Alignments - vertical</h1>
+<pre><code>
+&lt;div class=&quot;row top-xs&quot;&gt;
+    &lt;div class=&quot;col-xs-1-2&quot;&gt;
+        &lt;div class=&quot;box-row box-large&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-1-2&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;top&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+    <div class="container container-colored">
+        <div class="row top-xs">
+            <div class="col-xs-1-2">
+                <div class="box-row box-large"></div>
+            </div>
+            <div class="col-xs-1-2">
+                <div class="box-row">top</div>
+            </div>
+        </div>
+        <div class="row middle-xs">
+            <div class="col-xs-1-2">
+                <div class="box-row box-large"></div>
+            </div>
+            <div class="col-xs-1-2">
+                <div class="box-row">middle</div>
+            </div>
+        </div>
+        <div class="row bottom-xs">
+            <div class="col-xs-1-2">
+                <div class="box-row box-large"></div>
+            </div>
+            <div class="col-xs-1-2">
+                <div class="box-row">bottom</div>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+<h1>Distribution - around</h1>
+<pre><code>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;
+            &lt;div class=&quot;row around-xs&quot;&gt;
+                &lt;div class=&quot;col-xs-1-4&quot;&gt;
+                    &lt;div class=&quot;box-row&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-1-4&quot;&gt;
+                    &lt;div class=&quot;box-row&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-1-4&quot;&gt;
+                    &lt;div class=&quot;box-row&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+    <div class="container container-colored">
+        <div class="row">
+            <div class="col-xs">
+                <div class="box-row">
+                    <div class="row around-xs">
+                        <div class="col-xs-1-4">
+                            <div class="box-row"></div>
+                        </div>
+                        <div class="col-xs-1-4">
+                            <div class="box-row"></div>
+                        </div>
+                        <div class="col-xs-1-4">
+                            <div class="box-row"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+<h1>Distribution - between</h1>
+<pre><code>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs&quot;&gt;
+        &lt;div class=&quot;box-row&quot;&gt;
+            &lt;div class=&quot;row between-xs&quot;&gt;
+                &lt;div class=&quot;col-xs-1-4&quot;&gt;
+                    &lt;div class=&quot;box-row&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-1-4&quot;&gt;
+                    &lt;div class=&quot;box-row&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-1-4&quot;&gt;
+                    &lt;div class=&quot;box-row&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+    <div class="container container-colored">
+        <div class="row">
+            <div class="col-xs">
+                <div class="box-row">
+                    <div class="row between-xs">
+                        <div class="col-xs-1-4">
+                            <div class="box-row"></div>
+                        </div>
+                        <div class="col-xs-1-4">
+                            <div class="box-row"></div>
+                        </div>
+                        <div class="col-xs-1-4">
+                            <div class="box-row"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+            <h1>Responsive visibility</h1>
+    </div>
+
+    <div class="container container-colored">
+        <div class="row">
+            <div class="col-xs">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="25%"></th>
+                                <th width="15%">Extra Small Devices<br><small>Phones (&lt;xxx px)</small></th>
+                                <th width="15%">Small Devices<br><small>Tablets (xxx px - xxx px)</small></th>
+                                <th width="15%">Medium devices<br><small>Laptops (xxxx px - xxxx px)</small></th>
+                                <th width="15%">Large devices<br><small>Desktops (xxxx px - xxxx px)</small></th>
+                                <th width="15%">Extra Large devices<br><small>Large Desktops (≥xxxx px)</small></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.visible-xs</code></td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-sm</code></td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-sm-up</code></td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-sm-down</code></td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-md</code></td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-md-up</code></td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-md-down</code></td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-lg</code></td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-hidden">Hidden</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-lg-up</code></td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-lg-down</code></td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-hidden">Hidden</td>
+                            </tr>
+                            <tr>
+                                <td><code>.visible-xl</code></td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-visible">Visible</td>
+                            </tr>
+                            <tr>
+                                <td><code>.hide</code></td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                                <td class="is-hidden">Hidden</td>
+                            </tr>
+                            <tr>
+                                <td><code>.show</code></td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                                <td class="is-visible">Visible</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="res-container">
+        <div class="res-test res-xs">XS RES<span class="high-pixel-density xs-hpd">XS HPD</span></div>
+        <div class="res-test res-sm">SM RES<span class="high-pixel-density sm-hpd">SM HPD</span></div>
+        <div class="res-test res-md">MD RES<span class="high-pixel-density md-hpd">MD HPD</span></div>
+        <div class="res-test res-lg">LG RES<span class="high-pixel-density lg-hpd">LG HPD</span></div>
+        <div class="res-test res-xl">XL RES<span class="high-pixel-density xl-hpd">XL HPD</span></div>
+    </div>
+    <div class="visible-container">
+        <div class="visible-xs">Visible XS</div>
+        <div class="visible-sm">Visible SM</div>
+        <div class="visible-md">Visible MD</div>
+        <div class="visible-lg">Visible LG</div>
+        <div class="visible-xl">Visible XL</div>
+    </div>
+</body>
+
+</html>

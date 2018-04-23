@@ -1,0 +1,20 @@
+/*
+ * Breakpoints
+ */
+
+// Screen Sizes
+$rem-value:                 16 !default;
+
+$screen-xs-min:             30rem !default;   //480px;
+$screen-sm-min:             48rem !default;   //768px;
+$screen-md-min:             64rem !default;   //1024px;
+$screen-lg-min:             75rem !default;   //1200px;
+$screen-xl-min:             87.5rem !default; //1680px;
+
+$screen-xs-max:             $screen-sm-min - (1 / $rem-value) !default;
+$screen-sm-max:             $screen-md-min - (1 / $rem-value) !default;
+$screen-md-max:             $screen-lg-min - (1 / $rem-value) !default;
+$screen-lg-max:             $screen-xl-min - (1 / $rem-value) !default;
+
+$screen-xl:                 $screen-xl-min !default;
+

@@ -1,0 +1,32 @@
+/*
+ * Definitions
+ */
+
+// Link
+$link-color:				$brand-primary !default;
+
+// Link Hover
+$link-hover-color: 			lighten($link-color, 10%) !default;
+$link-hover-decoration: 	underline !default;
+
+
+/*
+ * Link
+ */
+
+a {
+	color: $link-color;
+	@include transition(color $transition-fast ease-in-out);
+
+	&:not(.btn):hover,
+	&:not(.btn):focus {
+		color: $link-hover-color;
+		text-decoration: none;
+	}
+	&.text-link{
+		text-decoration:$link-hover-decoration;
+		&:hover{
+			color: lighten($link-hover-color, 10%);
+		}
+	}
+}

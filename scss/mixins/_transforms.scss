@@ -1,0 +1,107 @@
+/*
+ * Transformations
+ */
+
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-ms-transform: $transform;
+	transform: $transform;
+}
+
+@mixin rotate($degrees) {
+	-webkit-transform: rotate($degrees);
+	-ms-transform: rotate($degrees);
+	transform: rotate($degrees);
+}
+
+@mixin scale($ratio) {
+	-webkit-transform: scale($ratio);
+	-ms-transform: scale($ratio);
+	transform: scale($ratio);
+}
+
+@mixin scale3d($x, $y, $z) {
+	-webkit-transform: scale3d($x, $y, $z);
+	-ms-transform: scale3d($x, $y, $z);
+	transform: scale3d($x, $y, $z);
+}
+
+@mixin translate($x, $y) {
+	-webkit-transform: translate($x, $y);
+	-ms-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+
+@mixin skew($x, $y) {
+	-webkit-transform: skew($x, $y);
+	-ms-transform: skewX($x) skewY($y);
+	transform: skew($x, $y);
+}
+
+@mixin translate3d($x, $y, $z) {
+	-webkit-transform: translate3d($x, $y, $z);
+	transform: translate3d($x, $y, $z);
+}
+
+@mixin translateX($offset) {
+	-webkit-transform: translateX($offset);
+	-ms-transform: translateX($offset);
+	transform: translateX($offset);
+}
+
+@mixin translateY($offset) {
+	-webkit-transform: translateY($offset);
+	-ms-transform: translateY($offset);
+	transform: translateY($offset);
+}
+
+@mixin translateZ($offset) {
+	-webkit-transform: translateZ($offset);
+	-ms-transform: translateZ($offset);
+	transform: translateZ($offset);
+}
+
+@mixin rotateX($degrees) {
+	-webkit-transform: rotateX($degrees);
+	-ms-transform: rotateX($degrees);
+	transform: rotateX($degrees);
+}
+
+@mixin rotateY($degrees) {
+	-webkit-transform: rotateY($degrees);
+	-ms-transform: rotateY($degrees);
+	transform: rotateY($degrees);
+}
+
+@mixin rotateZ($degrees) {
+	-webkit-transform: rotateZ($degrees);
+	-ms-transform: rotateZ($degrees);
+	transform: rotateZ($degrees);
+}
+
+@mixin transform-origin($origin) {
+	-webkit-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+@mixin transform-style($style) {
+	-webkit-transform-style: $style;
+	-ms-transform-style: $style;
+	transform-style: $style;
+}
+
+@mixin perspective($perspective) {
+	-webkit-perspective: $perspective;
+	perspective: $perspective;
+}
+
+@mixin perspective-origin($perspective) {
+	-webkit-perspective-origin: $perspective;
+	perspective-origin: $perspective;
+}
+
+@mixin backface-visibility($visibility) {
+	-webkit-backface-visibility: $visibility;
+	backface-visibility: $visibility;
+}
