@@ -1,0 +1,20 @@
+/*
+ * Definitions
+ */
+
+// Horizontal Rule
+$hr-margin: 		$margin-medium auto !default;
+$hr-height: 		1px !default;
+$hr-background: 	$gray-lighter !default;
+
+
+/*
+ * Horizontal Rule
+ */
+
+hr {
+	clear: both;
+	margin: $hr-margin;
+	height: $hr-height;
+	background: $hr-background;
+}

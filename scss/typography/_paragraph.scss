@@ -1,0 +1,18 @@
+/*
+ * Definitions
+ */
+
+// Paragraph
+$paragraph-margin: 		0 0 $margin-small 0 !default;
+$paragraph-line-height: $line-height-large !default;
+
+
+/*
+ * Paragraph
+ */
+
+p {
+	margin: $paragraph-margin;
+	@include font-size($font-size-medium);
+	line-height: $paragraph-line-height;
+}

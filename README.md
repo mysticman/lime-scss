@@ -1,8 +1,8 @@
-[![N|Solid](https://s18.postimg.cc/4jhduxiu1/lime-scss-logo.png)](https://lime-scss.com/products/nsolid)
+[![N|Solid](https://s18.postimg.cc/4jhduxiu1/lime-scss-logo.png)](https://github.com/mysticman/lime-scss)
 
 # Lime SCSS Framework
 
-Lime scss framework is a lightweight scss framework based flexbox, with NO javascript dependency.
+Lime scss framework is a lightweight scss framework based flexbox, with NO JavaScript dependency.
 
 Online docs
 
@@ -12,12 +12,12 @@ Online docs
 - A modern grid system should be based on flexbox
 - Much more flexible than bootstrap (not only n/12 col width)
 - Pull, push capability
-- Horizontal and vertical alignment opstions via flexbox (around, between etc.)
+- Horizontal and vertical alignment options via flexbox (around, between etc.)
 - More and customizable media breakpoint
 
 #### Lightweight
    - The core framework should only contains the fully customizable grid layout
-   - Not contain a UI element what has got Javascript dependency
+   - Not contain a UI element what has got JavaScript dependency
    - A framework should contains only the most frequently used elements (typography, form, buttons, image, table, callout)
 
 ### Modular and flexible
@@ -26,11 +26,11 @@ Online docs
    - Separate the scss architecture because of readability
 
 #### Built in support for mobiles and tablets
-  - Most of the css frameworks has got lack of support for specific mobile and tablet devices because of pixel density
+  - Most of the css/scss frameworks has got lack of support for specific mobile and tablet devices because of pixel density
 
 #### Philisophy 
    - Based on the SMACSS principles
-   - The class naming convetion is very important in a framework, it should be clear, tidy, meaningfull and familiar for everybody
+   - The class naming convention is very important in a framework, it should be clear, tidy, meaningful and familiar for everybody
 
 #### Other frameworks size 
 
