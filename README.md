@@ -36,8 +36,8 @@ Online docs
 
 | Framework | Size (gzip) | Difference |
 | ------ | ------ | ------ |
-| Lime SCSS | https://getbootstrap.com/ |-
-| Bootstrap 3.x | https://getbootstrap.com/docs/3.3/ | +160%
-| Bootstrap 4.x | https://getbootstrap.com/ | +170%
-| Foundation | https://foundation.zurb.com/ | +135%
-| Bulma | https://bulma.io/ | +175%
+| [Lime SCSS](https://github.com/mysticman/lime-scss) | 12.935KB  | -
+| [Bootstrap 3.x](https://getbootstrap.com/docs/3.3/) | 19.764KB | +160%
+| [Bootstrap 4.x](https://getbootstrap.com/) | 21.044KB  | +170% 
+| [Foundation](https://foundation.zurb.com/) | 16.858KB | +135%
+| [Bulma](https://bulma.io/) | 21.705KB | +175%
