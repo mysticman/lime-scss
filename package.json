@@ -42,15 +42,15 @@
   },
   "scripts": {
     "setup": "npm install",
-    "clean": "rimraf ./demo/lime*.css",
+    "clean": "rimraf ./docs/lime*.css",
     "prebuild": "npm run clean",
     "build:css": "node-sass ./scss/lime-bundle.scss",
-    "build:css:uncompressed": "npm run build:css -- ./demo/lime.css",
-    "build:css:min": "npm run build:css -- --output-style compressed ./demo/lime.min.css",
+    "build:css:uncompressed": "npm run build:css -- ./docs/lime.css",
+    "build:css:min": "npm run build:css -- --output-style compressed ./docs/lime.min.css",
     "build": "npm run build:css:min && npm run build:css:uncompressed",
     "watch:css": "npm run build:css:uncompressed -- --watch",
     "dev": "npm run clean && npm run build:css:uncompressed && concurrently \"npm run watch:css\" \"npm run server\"",
-    "server": "browser-sync start --files \"./demo/*.html,./demo/*.css\" --server ./demo",
+    "server": "browser-sync start --files \"./docs/*.html,./docs/*.css\" --server ./docs",
     "node-sass": "node-sass"
   },
   "devDependencies": {
