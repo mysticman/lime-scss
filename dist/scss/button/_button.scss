@@ -1,0 +1,56 @@
+/*
+ * Definitions
+ */
+
+// Button
+$button-padding: 			11px 20px !default;			//input vertical padding + 1 border
+$button-height: 			auto !default;
+$button-font-family: 		$font-family !default;
+$button-font-weight: 		$bold-font-weight !default;
+$button-font-size: 			$font-size-small !default;
+$button-color: 				$gray-dark !default;
+$button-letter-spacing: 	0.05rem !default;
+$button-text-align: 		center !default;
+$button-text-transform: 	uppercase !default;
+$button-background: 		#fff !default;
+$button-border: 			1px solid $gray-lighter !default;
+$button-border-radius: 		$border-radius !default;
+
+// Button Hover
+$button-hover-color: 		$gray-dark !default;
+$button-hover-background: 	darken($button-background, 10%) !default;
+$button-hover-border: 		1px solid darken($gray-lighter, 10%) !default;
+
+// Button Disabled
+$button-disabled-opacity: 	0.7 !default;
+
+// Button Block
+$button-block-text-align: 	center !default;
+
+
+// Button
+button,
+.btn {
+	@include button();
+	@include button-size($button-padding, $button-font-size);
+	@include button-theme($button-color, $button-background, $button-border, $button-hover-color, $button-hover-background, $button-hover-border);
+}
+
+// Button Disabled
+button:disabled,
+.btn.disabled {
+	cursor: default;
+	opacity: $button-disabled-opacity;
+}
+
+// iOS "clickable elements" fix for role="button"
+[role="button"] {
+	cursor: pointer;
+}
+
+// Button Block
+.btn-block {
+	display: block;
+	width: 100%;
+	text-align: $button-block-text-align;
+}

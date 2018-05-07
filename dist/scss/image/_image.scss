@@ -1,0 +1,25 @@
+/*
+ * Definitions
+ */
+
+//Image
+$image-rounded-border-radius: 			$border-radius !default;
+
+
+/*
+ * Image
+ */
+
+img {
+	vertical-align: bottom;
+	&.img-rounded {
+		border-radius: $image-rounded-border-radius;
+	}
+	&.img-circle {
+		border-radius: 50%;
+	}
+	&.img-responsive {
+		width: 100%;
+		height: auto;
+	}
+}

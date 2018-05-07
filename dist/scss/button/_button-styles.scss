@@ -1,0 +1,121 @@
+/*
+ * Definitions
+ */
+
+// Button Inverse
+$button-inverse-color: 				$brand-light !default;
+$button-inverse-background: 		$brand-inverse !default;
+$button-inverse-border: 			1px solid $brand-inverse !default;
+$button-inverse-hover-color: 		$button-inverse-color !default;
+$button-inverse-hover-background: 	lighten($button-inverse-background, 10%) !default;
+$button-inverse-hover-border: 		1px solid lighten($button-inverse-background, 10%) !default;
+
+// Button Primary
+$button-primary-color: 				#fff !default;
+$button-primary-background: 		$brand-primary !default;
+$button-primary-border: 			1px solid $brand-primary !default;
+$button-primary-hover-color: 		$button-primary-color !default;
+$button-primary-hover-background: 	darken($brand-primary, 10%) !default;
+$button-primary-hover-border: 		1px solid darken($brand-primary, 10%) !default;
+
+// Button Secondary
+$button-secondary-color: 			#fff !default;
+$button-secondary-background: 		$brand-secondary !default;
+$button-secondary-border: 			1px solid $brand-secondary !default;
+$button-secondary-hover-color: 		$button-secondary-color !default;
+$button-secondary-hover-background: darken($brand-secondary, 10%) !default;
+$button-secondary-hover-border: 	1px solid darken($brand-secondary, 10%) !default;
+
+// Button Border
+$button-border-color: 				$brand-dark !default;
+$button-border-border: 				1px solid $button-border-color !default;
+$button-border-background: 			transparent !default;
+$button-border-hover-color: 		#fff !default;
+$button-border-hover-border: 		1px solid $button-border-color !default;
+$button-border-hover-background: 	$button-border-color !default;
+
+// Button error
+$button-error-color: 				#fff !default;
+$button-error-border: 				1px solid $brand-error !default;
+$button-error-background: 			$brand-error !default;
+$button-error-hover-color: 			#fff !default;
+$button-error-hover-border: 		1px solid lighten($brand-error, 10%) !default;
+$button-error-hover-background: 	lighten($brand-error, 10%) !default;
+
+// Button warning
+$button-warning-color: 				#fff !default;
+$button-warning-border: 			1px solid $brand-warning !default;
+$button-warning-background: 		$brand-warning !default;
+$button-warning-hover-color: 		#fff !default;
+$button-warning-hover-border: 		1px solid lighten($brand-warning, 10%) !default;
+$button-warning-hover-background: 	lighten($brand-warning, 10%) !default;
+
+// Button info
+$button-info-color: 				#fff !default;
+$button-info-border: 				1px solid $brand-info !default;
+$button-info-background: 			$brand-info !default;
+$button-info-hover-color: 			#fff !default;
+$button-info-hover-border: 			1px solid lighten($brand-info, 10%) !default;
+$button-info-hover-background: 		lighten($brand-info, 10%) !default;
+
+// Button success
+$button-success-color: 				#fff !default;
+$button-success-border: 			1px solid $brand-success !default;
+$button-success-background: 		$brand-success !default;
+$button-success-hover-color: 		#fff !default;
+$button-success-hover-border: 		1px solid lighten($brand-success, 10%) !default;
+$button-success-hover-background: 	lighten($brand-success, 10%) !default;
+
+// Button Text
+$button-text-color: 				$brand-dark !default;
+$button-text-hover-color: 			$brand-primary !default;
+
+
+/*
+ * Button Styles
+ */
+
+// Button Inverse
+.btn-inverse {
+	@include button-theme($button-inverse-color, $button-inverse-background, $button-inverse-border, $button-inverse-hover-color, $button-inverse-hover-background, $button-inverse-hover-border);
+}
+
+// Text Button
+.btn-text {
+	@include button-theme($button-text-color, transparent, none, $button-text-hover-color, transparent, none);
+}
+
+// Button Primary
+.btn-primary {
+	@include button-theme($button-primary-color, $button-primary-background, $button-primary-border, $button-primary-hover-color, $button-primary-hover-background, $button-primary-hover-border);
+}
+
+// Button Primary
+.btn-secondary {
+	@include button-theme($button-secondary-color, $button-secondary-background, $button-secondary-border, $button-secondary-hover-color, $button-secondary-hover-background, $button-secondary-hover-border);
+}
+
+// Button Border
+.btn-border {
+	@include button-theme($button-border-color, $button-border-background, $button-border-border, $button-border-hover-color, $button-border-hover-background, $button-border-hover-border);
+}
+
+// Button error
+.btn-error {
+	@include button-theme($button-error-color, $button-error-background, $button-error-border, $button-error-hover-color, $button-error-hover-background, $button-error-hover-border);
+}
+
+// Button warning
+.btn-warning {
+	@include button-theme($button-warning-color, $button-warning-background, $button-warning-border, $button-warning-hover-color, $button-warning-hover-background, $button-warning-hover-border);
+}
+
+// Button info
+.btn-info {
+	@include button-theme($button-info-color, $button-info-background, $button-info-border, $button-info-hover-color, $button-info-hover-background, $button-info-hover-border);
+}
+
+// Button success
+.btn-success {
+	@include button-theme($button-success-color, $button-success-background, $button-success-border, $button-success-hover-color, $button-success-hover-background, $button-success-hover-border);
+}

@@ -1,0 +1,69 @@
+$actual-column: $grid-columns;
+
+@for $i from 1 through $grid-columns {
+    @for $c from 1 through $actual-column {
+		  @if $c < $actual-column {
+			  .col-xs-push-#{$c}-#{$actual-column} {
+			    margin-left: ($c / $actual-column) * 100%;
+			  }
+		  }
+    }
+    $actual-column: $actual-column - 1;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+    $actual-column: $grid-columns;
+
+    @for $i from 1 through $grid-columns {
+        @for $c from 1 through $actual-column {
+            @if $c < $actual-column {
+                .col-sm-push-#{$c}-#{$actual-column} {
+                    margin-left: ($c / $actual-column) * 100%;
+                }
+            }
+        }
+        $actual-column: $actual-column - 1;
+    }
+}
+@media only screen and (min-width: $screen-md-min) {
+    $actual-column: $grid-columns;
+
+    @for $i from 1 through $grid-columns {
+        @for $c from 1 through $actual-column {
+            @if $c < $actual-column {
+                .col-md-push-#{$c}-#{$actual-column} {
+                    margin-left: ($c / $actual-column) * 100%;
+                }
+            }
+        }
+        $actual-column: $actual-column - 1;
+    }
+}
+@media only screen and (min-width: $screen-lg-min) {
+    $actual-column: $grid-columns;
+
+    @for $i from 1 through $grid-columns {
+        @for $c from 1 through $actual-column {
+            @if $c < $actual-column {
+                .col-lg-push-#{$c}-#{$actual-column} {
+                    margin-left: ($c / $actual-column) * 100%;
+                }
+            }
+        }
+        $actual-column: $actual-column - 1;
+    }
+}
+@media only screen and (min-width: $screen-xl-min) {
+    $actual-column: $grid-columns;
+
+    @for $i from 1 through $grid-columns {
+        @for $c from 1 through $actual-column {
+            @if $c < $actual-column {
+                .col-xl-push-#{$c}-#{$actual-column} {
+                    margin-left: ($c / $actual-column) * 100%;
+                }
+            }
+        }
+        $actual-column: $actual-column - 1;
+    }
+}

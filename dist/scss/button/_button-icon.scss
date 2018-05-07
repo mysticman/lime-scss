@@ -1,0 +1,54 @@
+/*
+ * Definitions
+ */
+
+// Button Icon
+$button-icon-size: 						$font-size-medium !default;
+$button-icon-left-margin: 				$margin-xsmall !default;
+$button-icon-right-margin: 				$margin-xsmall !default;
+
+// Button Icon Sizes
+$button-icon-xlarge-size: 				$font-size-xlarge !default;
+$button-icon-large-size: 				$font-size-large !default;
+$button-icon-medium-size: 				$font-size-medium !default;
+$button-icon-small-size: 				$font-size-small !default;
+
+/*
+ * Button Icon
+ */
+
+// Button Icon Left
+.btn-icon-left > i {
+	margin-right: $button-icon-left-margin;
+}
+
+// Button Icon Right
+.btn-icon-right > i {
+	margin-left: $button-icon-left-margin;
+}
+
+.btn-icon {
+	&.btn-xl {
+		> i{
+			font-size: $button-icon-xlarge-size + rem
+		}
+	}
+
+	&.btn-lg {
+		> i{
+			font-size: $button-icon-large-size + rem
+		}
+	}
+
+	&.btn-md {
+		> i{
+			font-size: $button-icon-medium-size + rem
+		}
+	}
+
+	&.btn-sm {
+		> i{
+			font-size: $button-icon-small-size + rem
+		}
+	}
+}

@@ -1,0 +1,73 @@
+/*
+ * Float
+ */
+ 
+//Right
+.right {
+	float: right !important;
+}
+
+.clear-right-xl {
+	@media #{$xlarge} {
+		float: none !important;
+	}
+}
+
+.clear-right-lg {
+	@media #{$large} {
+		float: none !important;
+	}
+}
+
+.clear-right-md {
+	@media #{$medium} {
+		float: none !important;
+	}
+}
+
+.clear-right-sm {
+	@media #{$small} {
+		float: none !important;
+	}
+}
+
+.clear-right-xs {
+	@media #{$xsmall} {
+		float: none !important;
+	}
+}
+
+//Left
+.left {
+	float: left !important;
+}
+
+.clear-left-xl {
+	@media #{$xlarge} {
+		float: none !important;
+	}
+}
+
+.clear-left-lg {
+	@media #{$large} {
+		float: none !important;
+	}
+}
+
+.clear-left-md {
+	@media #{$medium} {
+		float: none !important;
+	}
+}
+
+.clear-left-sm {
+	@media #{$small} {
+		float: none !important;
+	}
+}
+
+.clear-left-xs {
+	@media #{$xsmall} {
+		float: none !important;
+	}
+}

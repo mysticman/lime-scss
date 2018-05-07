@@ -1,0 +1,114 @@
+.col-xs,
+.col-sm,
+.col-md,
+.col-lg,
+.col-xl{
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+$actual-column: $grid-columns;
+
+@for $i from 1 through $grid-columns {
+    @if $i == 1 {
+      .col-xs-#{$i} {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+    @for $c from 1 through $actual-column {
+		  @if $c < $actual-column {
+			  .col-xs-#{$c}-#{$actual-column} {
+			    flex-basis: ($c / $actual-column) * 100%;
+			    max-width: ($c / $actual-column) * 100%;
+			  }
+		  }
+    }
+    $actual-column: $actual-column - 1;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+    $actual-column: $grid-columns;
+
+    @for $i from 1 through $grid-columns {
+        @if $i == 1 {
+        .col-sm-#{$i} {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+        @for $c from 1 through $actual-column {
+            @if $c < $actual-column {
+                .col-sm-#{$c}-#{$actual-column} {
+                    flex-basis: ($c / $actual-column) * 100%;
+                    max-width: ($c / $actual-column) * 100%;
+                }
+            }
+        }
+        $actual-column: $actual-column - 1;
+    }
+}
+@media only screen and (min-width: $screen-md-min) {
+    $actual-column: $grid-columns;
+
+    @for $i from 1 through $grid-columns {
+        @if $i == 1 {
+        .col-md-#{$i} {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+        @for $c from 1 through $actual-column {
+            @if $c < $actual-column {
+                .col-md-#{$c}-#{$actual-column} {
+                    flex-basis: ($c / $actual-column) * 100%;
+                    max-width: ($c / $actual-column) * 100%;
+                }
+            }
+        }
+        $actual-column: $actual-column - 1;
+    }
+}
+@media only screen and (min-width: $screen-lg-min) {
+    $actual-column: $grid-columns;
+
+    @for $i from 1 through $grid-columns {
+        @if $i == 1 {
+            .col-lg-#{$i} {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+        @for $c from 1 through $actual-column {
+            @if $c < $actual-column {
+                .col-lg-#{$c}-#{$actual-column} {
+                    flex-basis: ($c / $actual-column) * 100%;
+                    max-width: ($c / $actual-column) * 100%;
+                }
+            }
+        }
+        $actual-column: $actual-column - 1;
+    }
+}
+@media only screen and (min-width: $screen-xl-min) {
+    $actual-column: $grid-columns;
+
+    @for $i from 1 through $grid-columns {
+        @if $i == 1 {
+            .col-xl-#{$i} {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+        @for $c from 1 through $actual-column {
+            @if $c < $actual-column {
+                .col-xl-#{$c}-#{$actual-column} {
+                    flex-basis: ($c / $actual-column) * 100%;
+                    max-width: ($c / $actual-column) * 100%;
+                }
+            }
+        }
+        $actual-column: $actual-column - 1;
+    }
+}

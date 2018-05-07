@@ -1,0 +1,16 @@
+/*
+ * Definitions
+ */
+
+// Strong
+$strong-font-weight: $bold-font-weight !default;
+
+
+/*
+ * Strong
+ */
+
+b,
+strong {
+	font-weight: $strong-font-weight;
+}

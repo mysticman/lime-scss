@@ -1,5 +1,4 @@
 node_modules
-dist
 build*
 demo/lime*
 npm-debug.log*

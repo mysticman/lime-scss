@@ -1,0 +1,135 @@
+/*
+ * Definitions
+ */
+
+// Select
+$select-padding: 					$input-padding !default;
+$select-font-family: 				$input-font-family !default;
+$select-font-weight: 				$input-font-weight !default;
+$select-font-size: 					$input-font-size !default;
+$select-color: 						$input-color !default;
+$select-line-height: 				initial !default;
+$select-background: 				$input-background !default;
+$select-border: 					$input-border !default;
+$select-border-radius: 				$border-radius !default;
+
+// Select Arrow
+$select-arrow-size: 				0.4rem !default;
+$select-arrow-background: 			$gray-dark !default;
+
+// Select Hover
+$select-hover-color: 				$input-hover-color !default;
+$select-hover-background: 			$input-hover-background !default;
+$select-hover-border: 				$input-hover-border !default;
+
+// Select Focus
+$select-focus-color: 				$input-focus-color !default;
+$select-focus-background: 			$input-focus-background !default;
+$select-focus-border: 				$input-focus-border !default;
+
+
+/*
+ * Select
+ */
+
+select {
+	display: block;
+	width: 100%;
+}
+
+.select {
+	margin: 0;
+	position: relative;
+	display: block;
+	select {
+		padding: $select-padding;
+		line-height: $select-line-height;
+		font-family: $select-font-family;
+		font-weight: $select-font-weight;
+		@include font-size($select-font-size);
+		color: $select-color;
+		cursor: pointer;
+		outline: 0;
+		background: $select-background;
+		border: $select-border;
+		border-radius: $select-border-radius;
+		@include transition(all $transition-fast ease-in-out);
+		@include appearance(none);
+
+		// Undo the Firefox inner focus ring
+		&::-moz-focusring {
+			color: transparent;
+			text-shadow: 0 0 0 #000;
+		}
+
+		// Hide the arrow in IE10 and up
+		&::-ms-expand {
+			display: none;
+		}
+
+		&:hover {
+			@include input-style($select-hover-color, $select-hover-background, $select-hover-border);
+		}
+
+		&:focus {
+			@include input-style($select-focus-color, $select-focus-background, $select-focus-border);
+		}
+	}
+
+	// Dropdown Arrow
+	&:after {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		margin-top: -($select-arrow-size / 2);
+		width: 0;
+		height: 0;
+		content: '';
+		pointer-events: none;
+		border-left: $select-arrow-size solid transparent;
+		border-right: $select-arrow-size solid transparent;
+		border-top: $select-arrow-size solid $select-arrow-background;
+	}
+}
+
+// IE9 hide the arrow
+@media #{$ie9-10} {
+
+	.select {
+		select {
+			padding: 0.5em;
+		}
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+}
+
+// Firefox hack to hide the arrow
+@-moz-document url-prefix() {
+
+	// Firefox hack to hide the arrow (FF < 30)
+	.select select {
+		text-indent: 0.01px;
+		text-overflow: '';
+		padding-right: 1rem;
+	}
+
+	// Firefox hack to hide the arrow (FF => 30)
+	.select:before {
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		pointer-events: none;
+		width: 1em;
+		border: $select-border;
+		border-width: 1px 1px 1px 0px;
+		background: $select-background;
+		@include border-radius ($select-border-radius);
+	}
+}

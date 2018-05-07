@@ -1,0 +1,61 @@
+/*
+ * Definitions
+ */
+
+$button-base-size:				1 !default;
+
+
+$btn-xl-multiplier:				1.1 !default;
+$btn-lg-multiplier:				1 !default;
+$btn-md-multiplier:				0.8 !default;
+$btn-sm-multiplier:				0.6 !default;
+
+$btn-padding-ratio:				2 !default;
+
+$button-xlarge-padding-top: 	$button-base-size * 1rem * $btn-xl-multiplier !default;
+$button-xlarge-padding-side: 	$button-xlarge-padding-top * $btn-padding-ratio !default;
+
+$button-large-padding-top: 		$button-base-size * 1rem * $btn-lg-multiplier !default;
+$button-large-padding-side: 	$button-large-padding-top * $btn-padding-ratio !default;
+
+$button-medium-padding-top: 	$button-base-size * 1rem * $btn-md-multiplier !default;
+$button-medium-padding-side: 	$button-medium-padding-top * $btn-padding-ratio !default;
+
+$button-small-padding-top: 		$button-base-size * 1rem * $btn-sm-multiplier !default;
+$button-small-padding-side: 	$button-small-padding-top * $btn-padding-ratio !default;
+
+// Button Extra Large
+$button-xlarge-padding: 		$button-xlarge-padding-top $button-xlarge-padding-side !default;
+$button-xlarge-font-size: 		$btn-xl-multiplier * $button-base-size !default;
+
+// Button Large
+$button-large-padding: 			$button-large-padding-top $button-large-padding-side !default;
+$button-large-font-size: 		$btn-lg-multiplier * $button-base-size !default;
+
+// Button Medium
+$button-medium-padding: 		$button-medium-padding-top $button-medium-padding-side !default;
+$button-medium-font-size: 		$btn-md-multiplier * $button-base-size !default;
+
+// Button Small
+$button-small-padding: 			$button-small-padding-top $button-small-padding-side !default;
+$button-small-font-size: 		$btn-sm-multiplier * $button-base-size !default;
+
+/*
+ * Button Sizes
+ */
+
+.btn-xl {
+	@include button-size($button-xlarge-padding, $button-xlarge-font-size);
+}
+
+.btn-lg {
+	@include button-size($button-large-padding, $button-large-font-size);
+}
+
+.btn-md {
+	@include button-size($button-medium-padding, $button-medium-font-size);
+}
+
+.btn-sm {
+	@include button-size($button-small-padding, $button-small-font-size);
+}

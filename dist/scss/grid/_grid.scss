@@ -1,0 +1,110 @@
+// Based on
+// https://github.com/kristoferjoseph/flexboxgrid and
+// https://github.com/bigfishtv/turret
+//
+
+// Column
+$grid-columns: 	12 !default;
+
+$column-1: 		100% !default;
+
+$gutter-width: 1rem !default;
+$outer-margin: 2rem !default;
+
+$gutter-compensation: $gutter-width * - 0.5 !default;
+$half-gutter-width: $gutter-width * 0.5 !default;
+
+// $screen-xs-min: 34rem;   //480px;
+// $screen-sm-min: 54rem;   //768px;
+// $screen-md-min: 73rem;   //1024px;
+// $screen-lg-min: 85rem;   //1200px;
+// $screen-xl-min: 120rem;   //1680px;
+
+$container-sm: $screen-sm-min - $outer-margin * 2 !default;
+$container-md: $screen-md-min - $outer-margin * 2 !default;
+$container-lg: $screen-lg-min - $outer-margin * 2 !default;
+$container-xl: $screen-xl-min - $outer-margin * 2 !default;
+
+
+.container-fluid,
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+  margin: 0 auto;
+  &.no-gutter{
+      padding-right: 0;
+      padding-left: 0;
+  }
+  & > .row{
+    margin:0;
+  }
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
+  &.no-gutter{
+    margin-right: 0;
+    margin-left: 0;
+    & > [class*='col-'] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+[class*='col-'] {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+    max-width: 100%;
+}
+
+// .row.reverse {
+//   flex-direction: row-reverse;
+// }
+
+// .col.reverse {
+//   flex-direction: column-reverse;
+// }
+
+@media #{$xsmall} {
+  .container {
+    margin: 0 $gutter-width;
+  }
+}
+
+@media #{$small-up} {
+  .container {
+    max-width: $container-sm;
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .container {
+    max-width: $container-md;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .container {
+    max-width: $container-lg;
+  }
+}
+
+@media only screen and (min-width: $screen-xl-min) {
+  .container {
+    max-width: $container-xl;
+  }
+}
