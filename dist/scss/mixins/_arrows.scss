@@ -1,0 +1,73 @@
+/*
+ * Arrows
+ */
+
+@mixin arrow() {
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	content: ' ';
+}
+
+@mixin arrow-top($size, $color) {
+	@include arrow();
+	top: -$size;
+	left: 50%;
+	margin-left: -$size;
+	border-right: $size solid transparent;
+	border-bottom: $size solid $color;
+	border-left: $size solid transparent;
+}
+
+@mixin arrow-top-left($size, $color, $offset) {
+	@include arrow-top($size, $color);
+	left: $size + $offset;
+}
+
+@mixin arrow-top-right($size, $color, $offset) {
+	@include arrow-top($size, $color);
+	left: auto;
+	right: $offset;
+}
+
+@mixin arrow-bottom($size, $color) {
+	@include arrow();
+	bottom: -$size;
+	left: 50%;
+	margin-left: -$size;
+	border-right: $size solid transparent;
+	border-top: $size solid $color;
+	border-left: $size solid transparent;
+}
+
+@mixin arrow-bottom-left($size, $color, $offset) {
+	@include arrow-bottom($size, $color);
+	left: $size + $offset;
+}
+
+@mixin arrow-bottom-right($size, $color, $offset) {
+	@include arrow-bottom($size, $color);
+	left: auto;
+	right: $offset;
+}
+
+@mixin arrow-left($size, $color) {
+	@include arrow();
+	left: -$size;
+	top: 50%;
+	margin-top: -$size;
+	border-top: $size solid transparent;
+	border-right: $size solid $color;
+	border-bottom: $size solid transparent;
+}
+
+@mixin arrow-right($size, $color) {
+	@include arrow();
+	right: -$size;
+	top: 50%;
+	margin-top: -$size;
+	border-top: $size solid transparent;
+	border-left: $size solid $color;
+	border-bottom: $size solid transparent;
+}

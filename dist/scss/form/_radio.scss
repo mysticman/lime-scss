@@ -1,0 +1,143 @@
+/*
+ * Definitions
+ */
+
+$radio-border-size:				    2px !default;
+$radio-z-index:                     500 !default;
+
+$radio-size:                        20px !default;
+$radio-empty-border-color: 		    $gray-light !default;
+$radio-fill-color:				    $brand-primary !default;	
+$radio-empty-color:				    $gray-dark !default;
+$radio-disabled-color:              $gray-light !default;
+$radio-disabled-solid-color:        $gray-light !default;
+
+/***************
+  Radio Buttons
+***************/
+
+
+/* Remove default Radio Buttons */
+
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+    position: absolute;
+    // left: -9999px;
+    // visibility: hidden;
+    height: $radio-size;
+    width: $radio-size;
+    margin: ($input-padding-vertical - $radio-border-size / 2 + 2) 0 0 0;        // + 2 because of input compensation
+    z-index: $radio-z-index;
+    opacity: 0.01;
+    &:not(:disabled){
+        cursor: pointer;
+    }
+    & + label{
+        position: relative;
+        display: inline-block;
+        height: $radio-size;
+        padding-left: $radio-size * 1.5;
+        @include font-size($label-font-size);
+        line-height: $radio-size;
+        @include transition($transition-medium ease);
+        @include user-select();
+        cursor: pointer;
+    }
+}
+
+[type="radio"] + label:before,
+[type="radio"] + label:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    margin: 0;          //4px
+    width: $radio-size;
+    height: $radio-size;
+    z-index: 0;
+    border-radius: 50%;
+    @include transition($transition-medium ease);
+}
+
+
+/* Unchecked styles */
+
+[type="radio"]:not(:checked) + label:before {
+    border: $radio-border-size solid $radio-empty-border-color;
+}
+
+[type="radio"]:not(:checked) + label:after {
+    border: $radio-border-size solid $radio-empty-border-color;
+    z-index: -1;
+    @include transform(scale(0));
+}
+
+
+/* Checked styles */
+
+[type="radio"]:checked + label:before {
+    // border: $radio-border-size solid transparent;
+    border: $radio-border-size solid $radio-fill-color;
+}
+
+[type="radio"]:checked + label:after {
+    // border: $radio-border-size solid $radio-fill-color;
+    // background-color: $radio-fill-color;
+    // z-index: 0;
+    // @include transform(scale(1.02));
+    border: $radio-border-size solid $radio-fill-color;
+    background-color: $radio-fill-color;
+    z-index: 0;
+    @include transform(scale(.5));
+}
+
+
+/* Radio With gap */
+
+[type="radio"].with-gap:checked + label:before {
+    border: $radio-border-size solid $radio-fill-color;
+}
+
+[type="radio"].with-gap:checked + label:after {
+    border: $radio-border-size solid $radio-fill-color;
+    background-color: $radio-fill-color;
+    z-index: 0;
+    @include transform(scale(.5));
+}
+
+
+/* Disabled Radio With gap */
+
+[type="radio"].with-gap:disabled:checked + label:before {
+    border: $radio-border-size solid $radio-disabled-color;
+}
+
+[type="radio"].with-gap:disabled:checked + label:after {
+    border: none;
+    background-color: $radio-disabled-color;
+}
+
+
+/* Disabled style */
+
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+    // background-color: transparent;
+    // border-color: $radio-disabled-color;
+    border: $radio-border-size solid $radio-disabled-color;
+}
+
+[type="radio"]:disabled + label {
+    color: $radio-disabled-color;
+}
+
+[type="radio"]:disabled:not(:checked) + label:before {
+    border-color: $radio-disabled-color;
+}
+
+[type="radio"]:disabled:checked + label:after {
+    // background-color: $radio-disabled-color;
+    // border-color: $radio-disabled-solid-color;
+    border: none;
+    background-color: $radio-disabled-color;
+}

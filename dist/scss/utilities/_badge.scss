@@ -1,0 +1,41 @@
+/*
+ * Badge
+ */
+
+$badge-margin:					0 3px !default;
+$badge-padding:					3px 7px !default;
+$badge-font-size:				#{$font-size-xsmall}rem !default;
+$badge-font-weight:				$regular-font-weight !default;
+$badge-color:					#fff !default;
+$badge-background-color:		$brand-primary !default;
+$badge-radius:					10% !default;
+
+.badge{
+	display: inline-block;
+	margin:$badge-margin;
+	padding: $badge-padding;
+    font-size: $badge-font-size;
+    font-weight: $badge-font-weight;
+    line-height: 1;
+    color: $badge-color;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: $badge-background-color;
+	border-radius: $badge-radius;
+	&.badge-error {
+		background-color: $brand-error;
+	}
+
+	&.badge-warning {
+		background-color: $brand-warning;
+	}
+
+	&.badge-success {
+		background-color: $brand-success;
+	}
+
+	&.badge-info {
+		background-color: $brand-info;
+	}
+}

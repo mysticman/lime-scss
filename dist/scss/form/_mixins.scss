@@ -1,0 +1,66 @@
+/****************************************************
+ * Input
+ */
+
+// Input
+@mixin input() {
+	display: block;
+	// margin: $input-margin;
+	width: 100%;
+	font-family: $input-font-family;
+	font-weight: $input-font-weight;
+	color: $input-color;
+	line-height: $input-line-height;
+	border: $input-border;
+	background: $input-background;
+	border-radius: $input-border-radius;
+	@include transition(all $transition-fast ease-in-out);
+	@include appearance(none);
+}
+
+// Input Size
+@mixin input-size($padding, $font-size) {
+	padding: $padding;
+	// height: $height;
+	@include font-size($font-size);
+}
+
+// Input Style
+@mixin input-style($color, $background, $border) {
+	color: $color;
+	background: $background;
+	border: $border;
+}
+
+// Input Indicator
+@mixin input-indicator($color) {
+	color: $color;
+	border-color: $color;
+}
+
+// Input Group Button
+@mixin input-group-btn($padding, $height, $font-size) {
+
+	> button,
+	> .btn {
+		padding: $padding;
+		height: $height;
+		min-width: $height;
+		@include font-size($font-size);
+	}
+}
+
+/****************************************************
+ * Select
+ */
+
+// Select Size
+@mixin select-size($padding, $height, $font-size) {
+
+	select {
+		padding: $padding;
+		height: $height;
+		@include font-size($font-size);
+		line-height: $height;
+	}
+}

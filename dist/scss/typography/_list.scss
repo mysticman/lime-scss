@@ -1,0 +1,45 @@
+/*
+ * Definitions
+ */
+
+// List
+$list-margin: 				$margin-small 0;
+$list-padding: 				0;
+
+// Lists Item
+$list-item-margin: 			5px 0 !default;
+$list-item-padding: 		$padding-small !default;
+$list-item-line-height:		1.45rem;
+
+// Unordered List
+$unordered-list-icon: 		disc !default;
+
+
+/*
+ * Lists
+ */
+
+// Unordered List
+ul{
+	&.list-styled{
+		list-style: $unordered-list-icon;
+	}
+	&.list-unstyled{
+		list-style: none;
+	}
+	&.list-styled,
+	&.list-unstyled{
+		padding-left: $list-item-padding;
+		li {
+			margin: $list-item-margin;
+			line-height: $list-item-line-height;
+		}
+	}
+}
+
+// List Inline
+.list-inline {
+	li {
+		display: inline-block;
+	}
+}

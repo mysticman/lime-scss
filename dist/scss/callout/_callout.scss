@@ -1,0 +1,37 @@
+/*
+ * Definitions
+ */
+
+// Pullout
+$callout-margin: 			$margin-medium !default;
+$callout-padding: 			$padding-medium !default;
+$callout-border: 			solid $brand-primary !default;
+$callout-border-width: 		0 0 0 5px !default;
+
+
+/*
+ * Pullout
+ */
+
+.callout {
+	margin: $callout-margin 0;
+	padding: $callout-padding;
+	border: $callout-border;
+	border-width: $callout-border-width;
+	&.callout-success {
+		border-color:$brand-success;
+		background-color: rgba($brand-success,0.2)
+	}
+	&.callout-warning {
+		border-color:$brand-warning;
+		background-color: rgba($brand-warning,0.2)
+	}
+	&.callout-error {
+		border-color:$brand-error;
+		background-color: rgba($brand-error,0.2)
+	}
+	&.callout-info {
+		border-color:$brand-info;
+		background-color: rgba($brand-info,0.2)
+	}
+}
