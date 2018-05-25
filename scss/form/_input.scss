@@ -4,7 +4,7 @@
 
 // Input
 $input-padding-vertical:			10px !default;
-$input-padding-horizontal:			15px !default;
+$input-padding-horizontal:			16px !default;
 $input-padding:						$input-padding-vertical $input-padding-horizontal !default;
 $input-color: 						$text-color !default;
 $input-font-family: 				$font-family !default;
@@ -152,11 +152,7 @@ input[type="search"] {
 
 // Input File
 input[type="file"] {
-	padding: 0;
-	height: auto;
+	// border: 0;
+	padding: 7px $input-padding-horizontal 7px 0;
 	background: transparent;
-	border: none;
-
-	// Override Normalise for Input Types
-	@include box-sizing(border-box);
 }
