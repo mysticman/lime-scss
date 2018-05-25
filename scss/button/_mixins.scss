@@ -4,14 +4,14 @@
 
 // Button
 @mixin button() {
-	display: inline-block;
-	width:auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	margin:0;
 	font-family: $button-font-family;
 	font-weight: $button-font-weight;
 	line-height: normal;
 	letter-spacing: $button-letter-spacing;
-	text-align: $button-text-align;
 	text-transform: $button-text-transform;
 	white-space: nowrap;
 	cursor: pointer;

@@ -9,26 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link rel="stylesheet" href="./lime.css">
 
@@ -133,75 +134,92 @@
 
         <div>
             <h2>Button types</h2>
+            <p>Pure button lookings. You can use &lt;button&gt; tag and &lt;a&gt; tag also for all examples what you can find here, but the &lt;a&gt; tag needs a .btn class to look like a button.</p>
+            <p>You can use buttons like a standalone element or within a .button-list container. Standalone the buttons has got no margin at all, but in a container there is on the bottom and the right side.</p>
     <pre><code>
-    &lt;button&gt;Button&lt;/button&gt; &nbsp;
-    &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+    &lt;div class=&quot;btn-list&quot;&gt; 
+        &lt;button&gt;Button&lt;/button&gt; &nbsp;
+        &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+    &lt;/div&gt; 
     </code></pre>
 
-            <button>Button</button>
-            <a class="btn" href="#">Link</a>
+    <div class="btn-list">
+        <button>Button</button>
+        <a class="btn" href="#">Link</a>
+    </div>
+        
 
             <h2>Button alignments</h2>
+            <p>Because buttons has got inline behavior in this framework you can align them as you want in a block container with <b>text-left</b>, <b>text-center</b> or with <b>text.right</b>. The default alignment is <b>left</b> so you don't need to use it, except with reason.</p>
     <pre><code class="html">
-    &lt;div&gt; 
-        &lt;button class=&quot;btn-primary&quot;&gt;Button Left&lt;/button&gt;
-    &lt;/div&gt; 
-    &lt;div class=&quot;text-center&quot;&gt; 
-        &lt;button class=&quot;btn-primary&quot;&gt;Button Center&lt;/button&gt;
-    &lt;/div&gt; 
-    &lt;div class=&quot;text-right&quot;&gt;
-        &lt;button class=&quot;btn-primary&quot;&gt;Button Right&lt;/button&gt;
-    &lt;/div&gt;
+    &#x3C;div class=&#x22;sample-container text-left&#x22;&#x3E;
+        &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;Button Left&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;sample-container text-center&#x22;&#x3E;
+        &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;Button Center&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;sample-container text-right&#x22;&#x3E;
+        &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;Button Right&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
     </code></pre>
 
     <div style="border:1px solid #ccc; padding: 10px;">
-        <div style="border: 1px solid #ededed;">
+        <div>
             <button class="btn-primary">Button Left</button>
         </div>
-        <div class="text-center"  style="border: 1px solid #ededed;; margin: 10px 0;">
+        <div class="text-center">
             <button class="btn-primary">Button Center</button>
         </div>
-        <div class="text-right"  style="border: 1px solid #ededed;">
+        <div class="text-right">
             <button class="btn-primary">Button Right</button>
         </div>
     </div>
     
     <h2>Button styles</h2>
     <p>
-        There is 6 different types of button can be used for <code class="highlighter-rouge">&lt;button&gt;</code> and <code class="highlighter-rouge">&lt;a&gt;</code> tags.
+        There are 10 different types of button style exist what you can used on <code class="highlighter-rouge">&lt;button&gt;</code> and <code class="highlighter-rouge">&lt;a&gt;</code> tags.
     </p>
 
     <pre><code class="html">
-    &lt;button class=&quot;btn-primary&quot;&gt;Primary&lt;/button&gt;
-    &lt;button class=&quot;btn-inverse&quot;&gt;Inverse&lt;/button&gt;
-    &lt;button class=&quot;btn-secondary&quot;&gt;Secondary&lt;/button&gt;
-    &lt;button class=&quot;btn-border&quot;&gt;Border&lt;/button&gt;
-    &lt;button&gt;Button&lt;/button&gt;
-    &lt;button class=&quot;btn-text&quot;&gt;Text&lt;/button&gt;
+    &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-inverse&#x22;&#x3E;Inverse&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-secondary&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-border&#x22;&#x3E;Border&#x3C;/button&#x3E;
+    &#x3C;button&#x3E;Unstyled&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-text&#x22;&#x3E;Text&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-success&#x22;&#x3E;Success&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-info&#x22;&#x3E;Info&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-warning&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-error&#x22;&#x3E;Error&#x3C;/button&#x3E;
     </code></pre>
 
     <button class="btn-primary">Primary</button>
     <button class="btn-inverse">Inverse</button>
     <button class="btn-secondary">Secondary</button>
     <button class="btn-border">Border</button>
-    <button>Button</button>
+    <button>Unstyled</button>
     <button class="btn-text">Text</button>
-    
     <button class="btn-success">Success</button>
     <button class="btn-info">Info</button>
     <button class="btn-warning">Warning</button>
     <button class="btn-error">Error</button>
 
-    <br>
-    <br>
+    <hr>
+    <p>
+        You can disable all of them with the <b>disable</b> attribute.
+    </p>
 
     <pre><code class="html">
-    &lt;button class=&quot;btn-primary&quot; disabled&gt;Disabled&lt;/button&gt;
-    &lt;button class=&quot;btn-inverse&quot; disabled&gt;Disabled&lt;/button&gt;
-    &lt;button class=&quot;btn-secondary&quot; disabled&gt;Disabled&lt;/button&gt;
-    &lt;button class=&quot;btn-border&quot; disabled&gt;Disabled&lt;/button&gt;
-    &lt;button disabled&gt;Disabled&lt;/button&gt;
-    &lt;button class=&quot;btn-text&quot; disabled&gt;Disabled&lt;/button&gt;
+    &#x3C;button class=&#x22;btn-primary&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-inverse&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-secondary&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-border&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+    &#x3C;button disabled&#x3E;Disabled&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-text&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-success&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-info&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-warning&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
+    &#x3C;button class=&#x22;btn-error&#x22; disabled&#x3E;Disabled&#x3C;/button&#x3E;
     </code></pre>
 
             <button class="btn-primary" disabled>Disabled</button>
@@ -210,6 +228,10 @@
             <button class="btn-border" disabled>Disabled</button>
             <button disabled>Disabled</button>
             <button class="btn-text" disabled>Disabled</button>
+            <button class="btn-success" disabled>Disabled</button>
+            <button class="btn-info" disabled>Disabled</button>
+            <button class="btn-warning" disabled>Disabled</button>
+            <button class="btn-error" disabled>Disabled</button>
 
             <!--<h2>Button indicator</h2>
 
@@ -223,175 +245,273 @@
             </div>-->
 
             <h2>Button sizes</h2>
+            <p>Built-in 4 button size exist, what you can use for button tag or a tag also like everything else.</p>
     <pre><code class="html">
-    &lt;button class=&quot;btn-primary btn-xl&quot;&gt;Extra Large&lt;/button&gt;
-    &lt;button class=&quot;btn-secondary btn-lg&quot;&gt;Large&lt;/button&gt;
-    &lt;button class=&quot;btn-primary btn-md&quot;&gt;Medium&lt;/button&gt;
-    &lt;button class=&quot;btn-secondary btn-sm&quot;&gt;Small&lt;/button&gt;
+    &#x3C;div class=&#x22;btn-list&#x22;&#x3E;
+        &#x3C;button class=&#x22;btn-primary btn-xl&#x22;&#x3E;Extra Large&#x3C;/button&#x3E;
+        &#x3C;button class=&#x22;btn-secondary btn-lg&#x22;&#x3E;Large&#x3C;/button&#x3E;
+        &#x3C;button class=&#x22;btn-primary btn-md&#x22;&#x3E;Medium&#x3C;/button&#x3E;
+        &#x3C;button class=&#x22;btn-secondary btn-sm&#x22;&#x3E;Small&#x3C;/button&#x3E;
+        &#x3C;button class=&#x22;btn-primary btn-xs&#x22;&#x3E;Extra Small&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
     </code></pre>
 
-            <div>
+            <div class="btn-list">
                 <button class="btn-primary btn-xl">Extra Large</button>
                 <button class="btn-secondary btn-lg">Large</button>
                 <button class="btn-primary btn-md">Medium</button>
                 <button class="btn-secondary btn-sm">Small</button>
+                <button class="btn-primary btn-xs">Extra Small</button>
             </div>
-            <br><br>    
-            <div>
+            <hr>  
+            <div class="btn-list">
                 <a href="#" class="btn btn-primary btn-xl">Extra Large</a>
                 <a href="#" class="btn btn-secondary btn-lg">Large</a>
                 <a href="#" class="btn btn-primary btn-md">Medium</a>
-                 <a href="#"  class="btn btn-secondary btn-sm">Small</a>
+                <a href="#"  class="btn btn-secondary btn-sm">Small</a>
+                <a href="#"  class="btn btn-primary btn-xs">Extra Small</a>
             </div>
 
             <h2>Button icon</h2>
-    <pre><code class="html">
-    &lt;button class=&quot;btn-icon btn-primary btn-icon-left&quot;&gt;
-        &lt;i class=&quot;fa fa-coffee&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-        Button Icon
-    &lt;/button&gt;
-    &lt;button class=&quot;btn-icon btn-primary btn-icon-right&quot;&gt;
-        Button Icon
-        &lt;i class=&quot;fa fa-coffee&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-    &lt;/button&gt;
-
-    &lt;button class=&quot;btn-icon btn-secondary btn-icon-left&quot;&gt; 
-        &lt;i class=&quot;fa fa-bars&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-        Button Icon
-    &lt;/button&gt;
-    &lt;button class=&quot;btn-icon btn-secondary btn-icon-right&quot;&gt;
-        Button Icon
-        &lt;i class=&quot;fa fa-coffee&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-    &lt;/button&gt;
-    </code></pre>
+            <p>You can use any kind of web font iconset like <b>FontAwesome</b> anything else. You can use icons on any side or both.</p>
+            <pre><code class="html">
+    &#x3C;div class=&#x22;btn-list&#x22;&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-primary&#x22;&#x3E;
+            &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+            &#x3C;span&#x3E;Button left&#x3C;/span&#x3E;
+        &#x3C;/button&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-secondary&#x22;&#x3E;
+            &#x3C;span&#x3E;Button right&#x3C;/span&#x3E;
+            &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+        &#x3C;/button&#x3E;                
+        &#x3C;button class=&#x22;btn-icon btn-primary&#x22;&#x3E;
+            &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+            &#x3C;span&#x3E;Button both&#x3C;/span&#x3E;
+            &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+        &#x3C;/button&#x3E;                
+    &#x3C;/div&#x3E;
+            </code></pre>
 
             <div style="margin-bottom: 20px">
-                <button class="btn-icon btn-primary btn-icon-left">
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                    Button Icon
-                </button>
-                <button class="btn-icon btn-primary btn-icon-right">
-                    Button Icon
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                </button>
-                <hr>
-                <button class="btn-icon btn-secondary btn-icon-left"> 
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                    Button Icon
-                </button>
-                <button class="btn-icon btn-secondary btn-icon-right">
-                    Button Icon
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                </button>
-                <hr>
-                <button class="btn-icon btn-primary btn-icon-left">
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                    Button Icon
-                </button>
-                <button class="btn-icon btn-primary btn-icon-right">
-                    Button Icon
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                </button>
-                <hr>
-                <button class="btn-icon btn-secondary btn-icon-left"> 
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                    Button Icon
-                </button>
-                <button class="btn-icon btn-secondary btn-icon-right">
-                    Button Icon
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                </button>
+                <div class="btn-list">
+                    <button class="btn-icon btn-primary">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <span>Button left</span>
+                    </button>
+                    <button class="btn-icon btn-secondary">
+                        <span>Button right</span>
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                    </button>                
+                    <button class="btn-icon btn-primary">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <span>Button both</span>
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                    </button>                
+                </div>
             </div>
-            <h2>Button icon with sizes</h2>
+            
+            <h2>Button icon (with material icons)</h2>
+            <p>For testing purpose I used font aswesome to show icons, but it works for <b>material icons</b>, or any other iconset, even you own custom.</p>
+            <pre><code class="html">
+    &#x3C;div class=&#x22;btn-list&#x22;&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-primary&#x22;&#x3E;
+            &#x3C;i class=&#x22;material-icons&#x22;&#x3E;menu&#x3C;/i&#x3E;
+            &#x3C;span&#x3E;Button Icon&#x3C;/span&#x3E;
+        &#x3C;/button&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-primary&#x22;&#x3E;
+            &#x3C;span&#x3E;Button Icon&#x3C;/span&#x3E;
+            &#x3C;i class=&#x22;material-icons&#x22;&#x3E;sentiment_very_satisfied&#x3C;/i&#x3E;
+        &#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+            </code></pre>
             <div style="margin-bottom: 20px">
-                <button class="btn-icon btn-primary btn-xl btn-icon-left">
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                    Button Icon
-                </button>
-                <button class="btn-icon btn-primary btn-xl btn-icon-right">
-                    Button Icon
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                </button>
+                <div class="btn-list">
+                    <button class="btn-icon btn-primary">
+                        <i class="material-icons">menu</i>
+                        <span>Button Icon</span>
+                    </button>
+                    <button class="btn-icon btn-primary">
+                        <span>Button Icon</span>
+                        <i class="material-icons">sentiment_very_satisfied</i>
+                    </button>
+                </div>
                 <hr>
-                <button class="btn-icon btn-secondary btn-lg btn-icon-left"> 
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                    Button Icon
-                </button>
-                <button class="btn-icon btn-secondary  btn-lg btn-icon-right">
-                    Button Icon
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                </button>
+                <div class="btn-list">
+                    <button class="btn-icon btn-secondary"> 
+                        <i class="material-icons">menu</i>
+                        <span>Button Icon</span>
+                    </button>
+                    <button class="btn-icon btn-secondary"> 
+                        <i class="material-icons">menu</i>
+                        <span>Button Icon</span>
+                        <i class="material-icons">menu</i>
+                    </button>
+                    <button class="btn-icon btn-secondary">
+                        <span>Button Icon</span>
+                        <i class="material-icons md-light md-inactive">sentiment_very_satisfied</i>
+                    </button>
+                </div>
+            </div>
+
+            <h2>Button icon with sizes</h2>
+            <p>The default button size is <b>btn-md</b> so you can leave this class.</p>
+            <pre><code class="html">
+    &#x3C;div class=&#x22;btn-list&#x22;&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-primary btn-xl&#x22;&#x3E;
+            &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+            &#x3C;span&#x3E;Button Icon&#x3C;/span&#x3E;
+        &#x3C;/button&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-secondary btn-lg&#x22;&#x3E; 
+            &#x3C;i class=&#x22;fa fa-bars&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+            &#x3C;span&#x3E;Button Icon&#x3C;/span&#x3E;
+        &#x3C;/button&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-primary btn-md&#x22;&#x3E;
+            &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+            &#x3C;span&#x3E;Button Icon&#x3C;/span&#x3E;
+        &#x3C;/button&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-secondary btn-sm&#x22;&#x3E; 
+            &#x3C;i class=&#x22;fa fa-bars&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+            &#x3C;span&#x3E;Button Icon&#x3C;/span&#x3E;
+        &#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+            </code></pre>
+            <div style="margin-bottom: 20px">
+                <div class="btn-list">
+                    <button class="btn-icon btn-primary btn-xl">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <span>Button Icon</span>
+                    </button>
+                    <button class="btn-icon btn-primary btn-xl">
+                        <span>Button Icon</span>
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                    </button>
+                </div>
                 <hr>
-                <button class="btn-icon btn-primary btn-md btn-icon-left">
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                    Button Icon
-                </button>
-                <button class="btn-icon btn-primary btn-md btn-icon-right">
-                    Button Icon
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                </button>
+                <div class="btn-list">
+                    <button class="btn-icon btn-secondary btn-lg"> 
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <span>Button Icon</span>
+                    </button>
+                    <button class="btn-icon btn-secondary  btn-lg">
+                        <span>Button Icon</span>
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                    </button>
+                </div>
                 <hr>
-                <button class="btn-icon btn-secondary btn-sm btn-icon-left"> 
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                    Button Icon
-                </button>
-                <button class="btn-icon btn-secondary  btn-sm btn-icon-right">
-                    Button Icon
-                    <i class="fa fa-coffee" aria-hidden="true"></i>
-                </button>
+                <div class="btn-list">
+                    <button class="btn-icon btn-primary btn-md">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <span>Button Icon</span>
+                    </button>
+                    <button class="btn-icon btn-primary btn-md">
+                        <span>Button Icon</span>
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <hr>
+                <div class="btn-list">
+                    <button class="btn-icon btn-secondary btn-sm"> 
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <span>Button Icon</span>
+                    </button>
+                    <button class="btn-icon btn-secondary  btn-sm">
+                        <span>Button Icon</span>
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
 
             <h2>Button group</h2>
-    
+            <p>In a <b>btn-group</b> you can put <b>buttons</b> or another <b>btn-group</b>.</p>
     <pre><code class="html">
-    &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button class=&quot;btn-primary&quot;&gt;Button&lt;/button&gt;
-        &lt;button class=&quot;btn-secondary&quot;&gt;Button&lt;/button&gt;
-        &lt;button class=&quot;btn-primary&quot;&gt;Button&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;btn-group btn-group-block&quot;&gt;
-        &lt;div class=&quot;btn-group&quot;&gt;
-            &lt;button class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;btn-group&quot;&gt;
-            &lt;button class=&quot;btn error&quot;&gt;Button&lt;/button&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;btn-group&quot;&gt;
-            &lt;button class=&quot;btn info&quot;&gt;Button&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;button class=&quot;btn-primary btn-block&quot;&gt;Button Block&lt;/button&gt;
-    &lt;/div&gt;
+        &#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+            &#x3C;button class=&#x22;btn-icon btn-primary &#x22;&#x3E;
+                &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+                &#x3C;span&#x3E;Button group 1&#x3C;/span&#x3E;
+            &#x3C;/button&#x3E;
+            &#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+                &#x3C;button class=&#x22;btn-icon btn-secondary &#x22;&#x3E;
+                    &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+                    &#x3C;span&#x3E;Button group 2&#x3C;/span&#x3E;
+                &#x3C;/button&#x3E;
+                &#x3C;button class=&#x22;btn-icon btn-primary &#x22;&#x3E;
+                    &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+                    &#x3C;span&#x3E;Button group 2&#x3C;/span&#x3E;
+                &#x3C;/button&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
     </code></pre>
 
-            <div class="btn-group">
-                <button class="btn-primary">Button</button>
-                <button class="btn-secondary">Button</button>
-                <button class="btn-primary">Button</button>
-            </div>
-
-            <br><br>
-
-            <div class="btn-group btn-group-block">
-                <div class="btn-group">
-                    <button class="btn-primary">Button</button>
-                </div>
-                <div class="btn-group">
-                    <button class="error">Button</button>
-                </div>
-                <div class="btn-group">
-                    <button class="info">Button</button>
-                </div>
-            </div>
-            
-            <br>
-            
-            <div>
-                <button class="btn-primary btn-block">Button Block</button>
-            </div>
+    <div class="btn-group">
+            <button class="btn-icon btn-primary ">
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+                <span>Button Icon</span>
+            </button>
+            <button class="btn-icon btn-secondary ">
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+                <span>Button Icon</span>
+            </button>
         </div>
 
+        <hr>
+
+            <div class="btn-group">
+                <button class="btn-icon btn-primary ">
+                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                    <span>Button group 1</span>
+                </button>
+                <div class="btn-group">
+                    <button class="btn-icon btn-secondary ">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <span>Button group 2</span>
+                    </button>
+                    <button class="btn-icon btn-primary ">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <span>Button group 2</span>
+                    </button>
+                </div>
+            </div>
+            
+
+        <h2>Button block group</h2>
+        <p>In this case you can use buttons or btn-groups as block elements with <b>btn-block</b> class.</p>
+
+        <pre><code class="html">
+    &#x3C;div class=&#x22;btn-group btn-block&#x22;&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-primary btn-block &#x22;&#x3E;
+            &#x3C;span&#x3E;Button Icon&#x3C;/span&#x3E;
+            &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+        &#x3C;/button&#x3E;          
+    &#x3C;/div&#x3E;
+        </code></pre>
+
+        <div class="btn-group btn-block">
+            <button class="btn-icon btn-primary btn-block ">
+                <span>Button Icon</span>
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+            </button>          
+        </div>
+
+        <hr>
+
+        <div class="btn-group btn-block">
+            <button class="btn-icon btn-primary ">
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+                <span>Button Icon</span>
+            </button>
+            <button class="btn-icon btn-secondary ">
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+                <span>Button Icon</span>
+            </button>
+            <button class="btn-icon btn-primary ">
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+                <span>Button Icon</span>
+            </button>
+            <button class="btn-icon btn-secondary ">
+                <span>Button Icon</span>
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+            </button>          
+        </div>
     </div>
 </body>
 
