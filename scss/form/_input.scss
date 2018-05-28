@@ -151,8 +151,17 @@ input[type="search"] {
  */
 
 // Input File
+ input[type="file"] + label {
+    position: relative;
+}
+
 input[type="file"] {
-	// border: 0;
-	padding: 7px $input-padding-horizontal 7px 0;
-	background: transparent;
+    opacity: 0;
+    position: absolute;
+    width: auto;
+}
+
+input[type="file"]~ label[for] {
+    cursor: pointer;
+    @extend .btn;
 }
