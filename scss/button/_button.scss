@@ -119,13 +119,16 @@ button:disabled,
 	& > .btn:last-child:not(:first-child) {
 		@include border-left-radius($border-radius);
 	}
+	&.btn-block {
+		button,
+		.btn{
+			flex-grow: 1;
+		}
+	}
 }
 
 // Button Block
 .btn-block {
-	button,
-	.btn{
-		margin: 0;
-		flex-grow: 1;
-	}
+	margin: 0;
+	width: 100%;
 }

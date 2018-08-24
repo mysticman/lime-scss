@@ -3,10 +3,13 @@
  */
 
 // Button
-$button-padding: 			11px 20px !default;			//input vertical padding + 1 border
+$button-margin: 			0 10px 10px 0!default;
+$button-padding-horizontal: 14px !default;
+$button-padding-vertical: 	8px !default;
+$button-padding: 			$button-padding-vertical $button-padding-horizontal !default;			//input vertical padding + 1 border
 $button-height: 			auto !default;
 $button-font-family: 		$font-family !default;
-$button-font-weight: 		$bold-font-weight !default;
+$button-font-weight: 		400 !default;
 $button-font-size: 			$font-size-small !default;
 $button-color: 				$gray-dark !default;
 $button-letter-spacing: 	0.05rem !default;
@@ -48,9 +51,84 @@ button:disabled,
 	cursor: pointer;
 }
 
+.btn-list,
+.btn-group {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.btn-list{
+	button,
+	.btn{
+		margin:$button-margin;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+.btn-group {
+	button,
+	.btn{
+		margin: 0;
+	}
+
+	// Prevent double borders when buttons are next to each other
+	button + button,
+	.btn + .btn,
+	button + .btn-group,
+	.btn + .btn-group,
+	.btn-group + button,
+	.btn-group + .btn,
+	.btn-group + .btn-group {
+		margin-left: -1px;
+	}
+
+	button:not(:first-child):not(:last-child),
+	.btn:not(:first-child):not(:last-child),
+	.btn-group:not(:first-child):not(:last-child) > button,
+	.btn-group:not(:first-child):not(:last-child) > .btn {
+		border-radius: 0;
+	}
+
+	& > .btn-group:first-child {
+
+		> button:last-child,
+		> .btn:last-child {
+			@include border-right-radius($border-radius);
+		}
+	}
+
+	& > .btn-group:last-child > button:first-child,
+	& > .btn-group:last-child > .btn:first-child {
+		@include border-left-radius($border-radius);
+	}
+
+	// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+	& > button:first-child,
+	& > .btn:first-child {
+		margin-left: 0;
+
+		&:not(:last-child) {
+			@include border-right-radius($border-radius);
+		}
+	}
+
+	& > button:last-child:not(:first-child),
+	& > .btn:last-child:not(:first-child) {
+		@include border-left-radius($border-radius);
+	}
+	&.btn-block {
+		button,
+		.btn{
+			flex-grow: 1;
+		}
+	}
+}
+
 // Button Block
 .btn-block {
-	display: block;
+	margin: 0;
 	width: 100%;
-	text-align: $button-block-text-align;
 }

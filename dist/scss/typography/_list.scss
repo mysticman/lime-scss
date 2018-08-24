@@ -39,7 +39,5 @@ ul{
 
 // List Inline
 .list-inline {
-	li {
-		display: inline-block;
-	}
+	display: flex;
 }

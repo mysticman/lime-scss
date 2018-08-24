@@ -1,5 +1,5 @@
 {
-  "version": "0.9.53",
+  "version": "0.9.81",
   "name": "lime-scss",
   "description": "Lime scss framework is a lightweight scss framework based flexbox, with NO javascript dependency.",
   "license": "MIT",
@@ -28,8 +28,12 @@
     "micro-framework",
     "mobile-first",
     "flexbox",
+    "flexbox framework",
+    "flexbox grid system",
     "responsive",
-    "javascript less"
+    "mobile support",
+    "javascript less",
+    "no javascript"
   ],
   "scripts-info": {
     "setup": "Setup project",
@@ -51,11 +55,11 @@
     "node-sass": "node-sass"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.2",
-    "concurrently": "^3.1.0",
+    "browser-sync": "^2.24.6",
+    "concurrently": "^3.6.1",
     "highlight": "^0.2.4",
-    "node-sass": "^3.13.0",
-    "rimraf": "^2.5.4",
+    "node-sass": "^4.9.3",
+    "rimraf": "^2.6.2",
     "cpx": "^1.5.0"
   }
 }
