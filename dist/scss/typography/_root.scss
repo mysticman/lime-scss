@@ -1,0 +1,11 @@
+
+/*
+ * Root Size
+ */
+
+:root {
+	font-family: $font-family;
+	font-weight: $regular-font-weight;
+	font-size: $font-size-medium + rem;
+	line-height: $line-height-medium + rem;
+}

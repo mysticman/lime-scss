@@ -1,0 +1,41 @@
+/*
+ * Global
+ */
+
+// Border Radius
+//
+$border-radius:         0 !default;
+
+// Animation
+//
+$animation-fast:        0.5s !default;
+$animation-medium:      1s !default;
+$animation-slow:        1.5s !default;
+
+// Transition
+//
+$transition-fast:       0.2s !default;
+$transition-medium:     0.3s !default;
+$transition-slow:       0.5s !default;
+
+// Margin
+//
+$margin-xlarge:         2.25rem !default;        //36px
+$margin-large:          1.875rem !default;       //30px
+$margin-medium:         1.5rem !default;         //24px
+$margin-small:          1.25rem !default;        //20px
+$margin-xsmall:         1rem !default;           //16px
+
+// Padding
+//
+$padding-xlarge:        $margin-xlarge !default;
+$padding-large:         $margin-large !default;
+$padding-medium:        $margin-medium !default;
+$padding-small:         $margin-small !default;
+$padding-xsmall:        $margin-xsmall !default;
+
+//box shadow
+//
+$box-shadow-large:      6px 6px 10px 0 rgba(0, 0, 0, 0.3) !default;
+$box-shadow-medium:     0 2px 10px 0 rgba(0, 0, 0, 0.3) !default;
+$box-shadow-small:      0 1px 5px 0 rgba(0, 0, 0, 0.3) !default;

@@ -2,43 +2,48 @@
  * Definitions
  */
 
-$button-base-size:				1 !default;
 
 
-$btn-xl-multiplier:				1.1 !default;
-$btn-lg-multiplier:				1 !default;
-$btn-md-multiplier:				0.8 !default;
-$btn-sm-multiplier:				0.6 !default;
+$btn-xl-multiplier:					1.2 !default;
+$btn-lg-multiplier:					1.1 !default;
+$btn-md-multiplier:					1 !default;
+$btn-sm-multiplier:					0.8 !default;
+$btn-xs-multiplier:					0.6 !default;
 
-$btn-padding-ratio:				2 !default;
+$button-xlarge-padding-vertical: 	$button-padding-vertical * $btn-xl-multiplier !default;
+$button-xlarge-padding-horizontal: 	$button-padding-horizontal * $btn-xl-multiplier !default;
 
-$button-xlarge-padding-top: 	$button-base-size * 1rem * $btn-xl-multiplier !default;
-$button-xlarge-padding-side: 	$button-xlarge-padding-top * $btn-padding-ratio !default;
+$button-large-padding-vertical: 	$button-padding-vertical * $btn-lg-multiplier !default;
+$button-large-padding-horizontal: 	$button-padding-horizontal * $btn-lg-multiplier !default;
 
-$button-large-padding-top: 		$button-base-size * 1rem * $btn-lg-multiplier !default;
-$button-large-padding-side: 	$button-large-padding-top * $btn-padding-ratio !default;
+$button-medium-padding-vertical: 	$button-padding-vertical  * $btn-md-multiplier !default;
+$button-medium-padding-horizontal: 	$button-padding-horizontal * $btn-md-multiplier !default;
 
-$button-medium-padding-top: 	$button-base-size * 1rem * $btn-md-multiplier !default;
-$button-medium-padding-side: 	$button-medium-padding-top * $btn-padding-ratio !default;
+$button-small-padding-vertical: 	$button-padding-vertical * $btn-sm-multiplier !default;
+$button-small-padding-horizontal: 	$button-padding-horizontal * $btn-sm-multiplier !default;
 
-$button-small-padding-top: 		$button-base-size * 1rem * $btn-sm-multiplier !default;
-$button-small-padding-side: 	$button-small-padding-top * $btn-padding-ratio !default;
+$button-xsmall-padding-vertical: 	$button-padding-vertical * $btn-xs-multiplier !default;
+$button-xsmall-padding-horizontal: 	$button-padding-horizontal * $btn-xs-multiplier !default;
 
 // Button Extra Large
-$button-xlarge-padding: 		$button-xlarge-padding-top $button-xlarge-padding-side !default;
-$button-xlarge-font-size: 		$btn-xl-multiplier * $button-base-size !default;
+$button-xlarge-padding: 			$button-xlarge-padding-vertical $button-xlarge-padding-horizontal !default;
+$button-xlarge-font-size: 			$btn-xl-multiplier * $button-font-size !default;
 
 // Button Large
-$button-large-padding: 			$button-large-padding-top $button-large-padding-side !default;
-$button-large-font-size: 		$btn-lg-multiplier * $button-base-size !default;
+$button-large-padding: 				$button-large-padding-vertical $button-large-padding-horizontal !default;
+$button-large-font-size: 			$btn-lg-multiplier * $button-font-size !default;
 
 // Button Medium
-$button-medium-padding: 		$button-medium-padding-top $button-medium-padding-side !default;
-$button-medium-font-size: 		$btn-md-multiplier * $button-base-size !default;
+$button-medium-padding: 			$button-medium-padding-vertical $button-medium-padding-horizontal !default;
+$button-medium-font-size: 			$btn-md-multiplier * $button-font-size !default;
 
 // Button Small
-$button-small-padding: 			$button-small-padding-top $button-small-padding-side !default;
-$button-small-font-size: 		$btn-sm-multiplier * $button-base-size !default;
+$button-small-padding: 				$button-small-padding-vertical $button-small-padding-horizontal !default;
+$button-small-font-size: 			$btn-sm-multiplier * $button-font-size !default;
+
+// Button Extra Small
+$button-xsmall-padding: 			$button-xsmall-padding-vertical $button-xsmall-padding-horizontal !default;
+$button-xsmall-font-size: 			$btn-xs-multiplier * $button-font-size !default;
 
 /*
  * Button Sizes
@@ -58,4 +63,8 @@ $button-small-font-size: 		$btn-sm-multiplier * $button-base-size !default;
 
 .btn-sm {
 	@include button-size($button-small-padding, $button-small-font-size);
+}
+
+.btn-xs {
+	@include button-size($button-xsmall-padding, $button-xsmall-font-size);
 }
