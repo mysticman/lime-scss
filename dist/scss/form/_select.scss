@@ -8,7 +8,7 @@ $select-font-family: 				$input-font-family !default;
 $select-font-weight: 				$input-font-weight !default;
 $select-font-size: 					$input-font-size !default;
 $select-color: 						$input-color !default;
-$select-line-height: 				initial !default;
+$select-line-height: 				$input-font-size !default;
 $select-background: 				$input-background !default;
 $select-border: 					$input-border !default;
 $select-border-radius: 				$border-radius !default;

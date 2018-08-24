@@ -421,6 +421,30 @@
                 </div>
             </div>
 
+            <h2>Button block</h2>
+            <p>Block style button <b>btn-block</b> on <b>buttons</b> or another</p>
+            <pre><code class="html">
+            
+            &#x3C;button class=&#x22;btn-block btn-primary &#x22;&#x3E;
+                Block button
+            &#x3C;/button&#x3E;
+
+            &#x3C;button class=&#x22;btn-icon btn-primary &#x22;&#x3E;
+                &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
+                &#x3C;span&#x3E;Button group 1&#x3C;/span&#x3E;
+            &#x3C;/button&#x3E;
+                    
+            </code></pre>
+
+            <button class="btn-block btn-primary ">
+                Block button
+            </button>
+<hr>
+            <button class="btn-icon btn-block btn-primary ">
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+                Block button
+            </button>
+
             <h2>Button group</h2>
             <p>In a <b>btn-group</b> you can put <b>buttons</b> or another <b>btn-group</b>.</p>
     <pre><code class="html">
@@ -477,22 +501,13 @@
         <p>In this case you can use buttons or btn-groups as block elements with <b>btn-block</b> class.</p>
 
         <pre><code class="html">
-    &#x3C;div class=&#x22;btn-group btn-block&#x22;&#x3E;
-        &#x3C;button class=&#x22;btn-icon btn-primary btn-block &#x22;&#x3E;
+    &#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+        &#x3C;button class=&#x22;btn-icon btn-primary &#x22;&#x3E;
             &#x3C;span&#x3E;Button Icon&#x3C;/span&#x3E;
             &#x3C;i class=&#x22;fa fa-coffee&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;
         &#x3C;/button&#x3E;          
     &#x3C;/div&#x3E;
         </code></pre>
-
-        <div class="btn-group btn-block">
-            <button class="btn-icon btn-primary btn-block ">
-                <span>Button Icon</span>
-                <i class="fa fa-coffee" aria-hidden="true"></i>
-            </button>          
-        </div>
-
-        <hr>
 
         <div class="btn-group btn-block">
             <button class="btn-icon btn-primary ">

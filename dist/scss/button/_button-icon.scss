@@ -4,8 +4,7 @@
 
 // Button Icon
 $button-icon-size: 						$font-size-medium !default;
-$button-icon-left-margin: 				$margin-xsmall !default;
-$button-icon-right-margin: 				$margin-xsmall !default;
+$button-icon-margin: 					$margin-xsmall !default;
 
 // Button Icon Sizes
 $button-icon-xlarge-size: 				$font-size-xlarge !default;
@@ -18,16 +17,22 @@ $button-icon-small-size: 				$font-size-small !default;
  */
 
 // Button Icon Left
-.btn-icon-left > i {
-	margin-right: $button-icon-left-margin;
-}
-
-// Button Icon Right
-.btn-icon-right > i {
-	margin-left: $button-icon-left-margin;
-}
-
 .btn-icon {
+	i{
+		&:first-child{
+			margin-right:$button-icon-margin;
+		}
+		&:first-child{
+			&:not(:last-child){
+				margin-right:$button-icon-margin; 
+			}
+		}
+		&:last-child{
+			&:not(:first-child){
+				margin-left: $button-icon-margin;
+		  	}
+		}
+	}
 	&.btn-xl {
 		> i{
 			font-size: $button-icon-xlarge-size + rem

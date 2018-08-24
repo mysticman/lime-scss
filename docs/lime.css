@@ -103,7 +103,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 a {
   background-color: transparent;
@@ -3111,8 +3111,7 @@ strong {
 /*
  * Definitions
  */
-button,
-.btn {
+button, .btn, input[type="file"] ~ label[for] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3134,13 +3133,16 @@ button,
   border: 1px solid #eceeef; }
   button:not(:disabled):hover, button:not(:disabled):focus,
   .btn:not(:disabled):hover,
-  .btn:not(:disabled):focus {
+  input[type="file"] ~ label:not(:disabled):hover[for],
+  .btn:not(:disabled):focus,
+  input[type="file"] ~ label:not(:disabled):focus[for] {
     color: #373a3c;
     background: #e6e6e6;
     border: 1px solid #d0d5d8; }
 
 button:disabled,
-.btn.disabled {
+.btn.disabled,
+input[type="file"] ~ label.disabled[for] {
   cursor: default;
   opacity: 0.7; }
 
@@ -3154,58 +3156,79 @@ button:disabled,
   align-items: center; }
 
 .btn-list button,
-.btn-list .btn {
+.btn-list .btn,
+.btn-list input[type="file"] ~ label[for] {
   margin: 0 10px 10px 0; }
   .btn-list button:last-child,
-  .btn-list .btn:last-child {
+  .btn-list .btn:last-child,
+  .btn-list input[type="file"] ~ label:last-child[for] {
     margin-right: 0; }
 
 .btn-group button,
-.btn-group .btn {
+.btn-group .btn,
+.btn-group input[type="file"] ~ label[for] {
   margin: 0; }
 
 .btn-group button + button,
 .btn-group .btn + .btn,
+.btn-group input[type="file"] ~ label[for] + .btn,
+.btn-group input[type="file"] ~ .btn + label[for],
+.btn-group input.btn[type="file"] + label[for],
+.btn-group input[type="file"] ~ input[type="file"] ~ label[for] + label[for],
 .btn-group button + .btn-group,
 .btn-group .btn + .btn-group,
+.btn-group input[type="file"] ~ label[for] + .btn-group,
 .btn-group .btn-group + button,
 .btn-group .btn-group + .btn,
+.btn-group input[type="file"] ~ .btn-group + label[for],
+.btn-group input.btn-group[type="file"] + label[for],
 .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
 
 .btn-group button:not(:first-child):not(:last-child),
 .btn-group .btn:not(:first-child):not(:last-child),
+.btn-group input[type="file"] ~ label:not(:first-child):not(:last-child)[for],
 .btn-group .btn-group:not(:first-child):not(:last-child) > button,
-.btn-group .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group .btn-group:not(:first-child):not(:last-child) > .btn,
+.btn-group .btn-group:not(:first-child):not(:last-child) > input[type="file"] ~ label[for] {
   border-radius: 0; }
 
 .btn-group > .btn-group:first-child > button:last-child,
-.btn-group > .btn-group:first-child > .btn:last-child {
+.btn-group > .btn-group:first-child > .btn:last-child,
+.btn-group > .btn-group:first-child > input[type="file"] ~ label:last-child[for] {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
 .btn-group > .btn-group:last-child > button:first-child,
-.btn-group > .btn-group:last-child > .btn:first-child {
+.btn-group > .btn-group:last-child > .btn:first-child,
+.btn-group > .btn-group:last-child > input[type="file"] ~ label:first-child[for] {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
 .btn-group > button:first-child,
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child,
+.btn-group > input[type="file"] ~ label:first-child[for] {
   margin-left: 0; }
   .btn-group > button:first-child:not(:last-child),
-  .btn-group > .btn:first-child:not(:last-child) {
+  .btn-group > .btn:first-child:not(:last-child),
+  .btn-group > input[type="file"] ~ label:first-child:not(:last-child)[for] {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
 .btn-group > button:last-child:not(:first-child),
-.btn-group > .btn:last-child:not(:first-child) {
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > input[type="file"] ~ label:last-child:not(:first-child)[for] {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-block button,
-.btn-block .btn {
-  margin: 0;
+.btn-group.btn-block button,
+.btn-group.btn-block .btn,
+.btn-group.btn-block input[type="file"] ~ label[for] {
   flex-grow: 1; }
+
+.btn-block {
+  margin: 0;
+  width: 100%; }
 
 /*
  * Definitions
@@ -3560,9 +3583,16 @@ input[type="search"] {
 /*
  * Input File
  */
+input[type="file"] + label {
+  position: relative; }
+
 input[type="file"] {
-  padding: 7px 16px 7px 0;
-  background: transparent; }
+  opacity: 0;
+  position: absolute;
+  width: auto; }
+
+input[type="file"] ~ label[for] {
+  cursor: pointer; }
 
 /*
  * Definitions
