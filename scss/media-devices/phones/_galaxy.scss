@@ -2,8 +2,8 @@
 
 /* Portrait and Landscape */
 @media screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 640px) 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 2) {
 
 }
@@ -19,8 +19,8 @@
 
 /* Landscape */
 @media screen 
-  and (device-width: 640px) 
-  and (device-height: 320px) 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 2) 
   and (orientation: landscape) {
 
@@ -30,8 +30,8 @@
 
 /* Portrait and Landscape */
 @media screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 640px) 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) {
 
 }
@@ -47,8 +47,8 @@
 
 /* Landscape */
 @media screen 
-  and (device-width: 640px) 
-  and (device-height: 320px) 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) 
   and (orientation: landscape) {
 
@@ -58,8 +58,8 @@
 
 /* Portrait and Landscape */
 @media screen 
-  and (min-device-width: 360px) 
-  and (max-device-width: 640px) 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) {
 
 }
