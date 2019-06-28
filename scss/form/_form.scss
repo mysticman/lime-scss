@@ -26,6 +26,7 @@ $form-input-height:                $input-padding-vertical * 2 + $input-border-s
 
 form{
 	.form-group{
+		position: relative;
 		margin: 0 $gutter-compensation $margin-medium;
 		padding: 0 $gutter-compensation * -1;
 		input,
