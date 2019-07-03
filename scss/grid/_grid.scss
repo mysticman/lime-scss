@@ -81,7 +81,11 @@ $container-xl: $screen-xl-min - $outer-margin * 2 !default;
 
 @media #{$xsmall} {
   .container {
-    margin: 0 $gutter-width;
+    margin: 0 $gutter-width; 
+    & > .row{
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
 
