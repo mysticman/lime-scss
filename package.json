@@ -50,15 +50,15 @@
     "watch:css": "npm run build:css:uncompressed -- --watch",
     "dev": "npm run clean && npm run build:css:uncompressed && concurrently \"npm run watch:css\" \"npm run server\"",
     "server": "browser-sync start --files \"./docs/*.html,./docs/*.css\" --server ./docs",
-    "prepublish:dist": "rimraf ./dist && npm run build && cpx ./scss/**/*.* ./dist/scss && cpx {./package.json,./README.md,./CHANGELOG.md,./LICENSE} ./dist",
+    "prepublish:dist": "rimraf ./dist && npm run build && copyfiles \"./scss/**/*.*\" \"./package.json\" \"./README.md\" \"./CHANGELOG.md\" \"./LICENSE\" ./dist",
     "publish:dist": "npm publish ./dist",
     "node-sass": "node-sass"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.7",
     "concurrently": "^3.6.1",
-    "cpx": "^1.5.0",
     "node-sass": "^4.12.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "copyfiles": "^2.1.0"
   }
 }
