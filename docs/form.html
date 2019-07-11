@@ -28,10 +28,14 @@
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="./lime.css">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">
+        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+    
+        <script>hljs.initHighlightingOnLoad();</script>
     <style>
         body {
             font-family: 'Yantramanav', sans-serif;
@@ -67,12 +71,9 @@
         }
         
         pre {
-            display: flex;
-            margin: 1rem 0;
-            padding: 1rem;
-            color: #555;
-            background: #fafafc;
-            border: 1px solid #ddd;
+            font-size: 0.9em;
+            line-height: 1.4em;
+            margin: 20px 0;
         }
         
         pre code {
@@ -155,6 +156,27 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
+
+        <pre><code>
+
+    &lt;form&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;form-simple-email&quot;&gt;Email&lt;/label&gt;
+            &lt;input type=&quot;email&quot; id=&quot;form-simple-email&quot; placeholder=&quot;Enter Email&quot; autocomplete=&quot;off&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;form-simple-password&quot;&gt;Password&lt;/label&gt;
+            &lt;input type=&quot;password&quot; id=&quot;form-simple-password&quot; placeholder=&quot;Enter Password&quot; autocomplete=&quot;off&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox1&quot;&gt;
+            &lt;label for=&quot;checkbox1&quot;&gt;I agree to checking this checkbox&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+
+        </pre></code>
+
         <h2>Multi-Column Form</h2>
 
         <form>
@@ -184,6 +206,37 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
+        <pre><code> 
+    &lt;form&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-1-2&quot;&gt;
+                    &lt;label for=&quot;mc-first-name&quot;&gt;First Name&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;mc-first-name&quot; placeholder=&quot;Enter First Name&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-1-2&quot;&gt;
+                    &lt;label for=&quot;mc-last-name&quot;&gt;Last Name&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;mc-last-name&quot; placeholder=&quot;Enter Last Name&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-1-2&quot;&gt;
+                    &lt;label for=&quot;mc-first-name&quot;&gt;First Name&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;mc-first-name&quot; placeholder=&quot;Enter First Name&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-1-2&quot;&gt;
+                    &lt;label for=&quot;mc-last-name&quot;&gt;Last Name&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;mc-last-name&quot; placeholder=&quot;Enter Last Name&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+        </pre></code>
+        
 
         <h2>Horizontal form sample</h2>
 
@@ -219,6 +272,40 @@
             </div>
 
         </form>
+
+        <pre><code> 
+    &lt;form class=&quot;form-horizontal&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;col-md-1-4&quot; for=&quot;h-first-name&quot;&gt;First Name&lt;/label&gt;
+            &lt;div class=&quot;col-md-3-4&quot;&gt;
+                &lt;input type=&quot;text&quot; id=&quot;h-first-name&quot; placeholder=&quot;Enter First Name&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;col-md-1-4&quot; for=&quot;h-last-name&quot;&gt;Last Name&lt;/label&gt;
+            &lt;div class=&quot;col-md-3-4&quot;&gt;
+                &lt;input type=&quot;text&quot; id=&quot;h-last-name&quot; placeholder=&quot;Enter Last Name&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;col-md-1-4&quot; for=&quot;h-email&quot;&gt;Email&lt;/label&gt;
+            &lt;div class=&quot;col-md-3-4&quot;&gt;
+                &lt;input type=&quot;email&quot; id=&quot;h-email&quot; placeholder=&quot;Enter Email&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;col-md-1-4&quot; for=&quot;h-password&quot;&gt;Password&lt;/label&gt;
+            &lt;div class=&quot;col-md-3-4&quot;&gt;
+                &lt;input type=&quot;password&quot; id=&quot;h-password&quot; placeholder=&quot;Enter Password&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;col-md-3-4 col-md-offset-1-4&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+        </pre></code>
 
         <h2>Vetical form messages</h2>
 
@@ -256,6 +343,42 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
+        <pre><code> 
+    &lt;form&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;fm1-title&quot;&gt;Title&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;fm1-title&quot; placeholder=&quot;Title&quot; value=&quot;Some data&quot;&gt;
+            &lt;p class=&quot;form-message&quot;&gt;Form message&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;fm1-first-name&quot;&gt;First Name&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;fm1-first-name&quot; placeholder=&quot;Enter First Name&quot; class=&quot;success&quot; value=&quot;Some data&quot;&gt;
+            &lt;p class=&quot;form-message msg-success&quot;&gt;Form message success&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;fm1-last-name&quot;&gt;Last Name&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;fm1-last-name&quot; placeholder=&quot;Enter Last Name&quot; class=&quot;error&quot; value=&quot;Some data&quot;&gt;
+            &lt;p class=&quot;form-message msg-error&quot;&gt;Form message error&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;fm2-first-name&quot;&gt;First Name&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;fm2-first-name&quot; placeholder=&quot;Enter First Name&quot; class=&quot;warning&quot; value=&quot;Some data&quot;&gt;
+            &lt;p class=&quot;form-message msg-warning&quot;&gt;Form message success&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;fm2-last-name&quot;&gt;Last Name&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;fm2-last-name&quot; placeholder=&quot;Enter Last Name&quot; class=&quot;info&quot; value=&quot;Some data&quot;&gt;
+            &lt;p class=&quot;form-message msg-info&quot;&gt;Form message error&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+        </pre></code>
+
         <h2>Horizontal form messages</h2>
 
         <form class="form-horizontal">
@@ -277,6 +400,28 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
+
+        <pre><code> 
+    &lt;form class=&quot;form-horizontal&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;col-md-1-4&quot; for=&quot;h1-first-name&quot;&gt;First Name&lt;/label&gt;
+            &lt;div class=&quot;col-md-3-4&quot;&gt;
+                &lt;input type=&quot;text&quot; id=&quot;h1-first-name&quot; placeholder=&quot;Enter First Name&quot; class=&quot;success&quot; value=&quot;Some value&quot;&gt;
+                &lt;p class=&quot;form-message msg-success&quot;&gt;Form message success&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;col-md-1-4&quot; for=&quot;h1-last-name&quot;&gt;Last Name&lt;/label&gt;
+            &lt;div class=&quot;col-md-3-4&quot;&gt;
+                &lt;input type=&quot;text&quot; id=&quot;h1-last-name&quot; placeholder=&quot;Enter Last Name&quot; class=&quot;error&quot; value=&quot;Some value&quot;&gt;
+                &lt;p class=&quot;form-message msg-error&quot;&gt;Form message error&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-3-4 col-md-offset-1-4&quot;&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+        </pre></code>
 
         <!-- <h2>Input groups</h2>
 
@@ -346,6 +491,20 @@
             </div>
         </form>
 
+        <pre><code> 
+    &lt;form role=&quot;form&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;select&quot;&gt;
+                &lt;select&gt;
+                    &lt;option&gt;Select Field&lt;/option&gt;
+                    &lt;option value=&quot;1&quot;&gt;Option 01&lt;/option&gt;
+                    &lt;option value=&quot;2&quot;&gt;Option 02&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+        </pre></code>
+
         <h2>File upload</h2>
 
         <div class="row">
@@ -368,6 +527,15 @@
         </div>
         
 
+
+        <pre><code> 
+    &lt;form role=&quot;form&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;file&quot; id=&quot;file-upload&quot;&gt;
+            &lt;label for=&quot;file-upload&quot;&gt;Upload&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+        </pre></code>
         <h2>Checkbox inline in form</h2>
         <div class="row">
             <div class="col-md-1-2">
@@ -411,8 +579,51 @@
                         <label>Checkbox disabled checked</label>
                     </div>
                 </form>
+
+   
             </div>
         </div>
+<pre><code> 
+    &lt;form&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot;&gt;
+            &lt;label&gt;Checkbox&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; checked&gt;
+            &lt;label&gt;Checkbox checked&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; disabled&gt;
+            &lt;label&gt;Checkbox disabled&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; checked disabled&gt;
+            &lt;label&gt;Checkbox disabled checked&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+</pre></code>
+
+<pre><code> 
+    &lt;form&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot;&gt;
+            &lt;label&gt;Checkbox&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot; checked&gt;
+            &lt;label&gt;Checkbox checked&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot;  class=&quot;filled-in&quot; disabled&gt;
+            &lt;label&gt;Checkbox disabled&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot; checked disabled&gt;
+            &lt;label&gt;Checkbox disabled checked&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+</pre></code>
 
         <h2>Checkbox inline NO form</h2>
         <div class="row">
@@ -437,6 +648,27 @@
                 </ul>
             </div>
         </div>
+
+<pre><code> 
+&lt;ul class=&quot;list-inline&quot;&gt;
+    &lt;li&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;label&gt;Checkbox&lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;input type=&quot;checkbox&quot; checked&gt;
+        &lt;label&gt;Checkbox checked&lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;input type=&quot;checkbox&quot; disabled&gt;
+        &lt;label&gt;Checkbox disabled&lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;input type=&quot;checkbox&quot; checked disabled&gt;
+        &lt;label&gt;Checkbox disabled checked&lt;/label&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre></code>
 
         <h2>Checkbox block</h2>
         <div class="row">
@@ -483,6 +715,47 @@
                 </form>
             </div>
         </div>
+        <pre><code> 
+    &lt;form&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox111&quot;&gt;
+            &lt;label for=&quot;checkbox111&quot;&gt;Classic checkbox&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox2&quot; checked&gt;
+            &lt;label for=&quot;checkbox2&quot;&gt;Classic checkbox checked&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox3&quot; disabled&gt;
+            &lt;label for=&quot;checkbox3&quot;&gt;Classic checkbox disabled&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox4&quot; checked disabled&gt;
+            &lt;label for=&quot;checkbox4&quot;&gt;Classic checkbox disabled checked&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+        </pre></code>
+
+<pre><code> 
+    &lt;form&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot; id=&quot;checkbox11&quot;&gt;
+            &lt;label for=&quot;checkbox11&quot;&gt;Classic checkbox&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot; id=&quot;checkbox21&quot; checked&gt;
+            &lt;label for=&quot;checkbox21&quot;&gt;Classic checkbox checked&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot; id=&quot;checkbox31&quot; disabled&gt;
+            &lt;label for=&quot;checkbox31&quot;&gt;Classic checkbox disabled&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot; id=&quot;checkbox41&quot; checked disabled&gt;
+            &lt;label for=&quot;checkbox41&quot;&gt;Classic checkbox disabled checked&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+</pre></code>
 
         <h2>Radio buttons</h2>
         <!--<div class="row">
@@ -531,6 +804,27 @@
             </div>
         </div>
 
+        <pre><code> 
+    &lt;form&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;radio-11&quot; name=&quot;room-11-options&quot;&gt;
+            &lt;label for=&quot;radio-11&quot;&gt;Option 1&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;radio-21&quot; checked name=&quot;room-11-options&quot;&gt;
+            &lt;label for=&quot;radio-21&quot;&gt;Option 2&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;radio-31&quot; disabled name=&quot;room-22-options&quot;&gt;
+            &lt;label for=&quot;adio-31&quot;&gt;Option 1&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;radio-41&quot; disabled checked name=&quot;room-22-options&quot;&gt;
+            &lt;label for=&quot;radio-41&quot;&gt;Option 2&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+        </pre></code>
+
         <h2>Form variations</h2>
         <div class="row">
             <div class="col-md-1">
@@ -561,6 +855,33 @@
                 </form>
             </div>
         </div>
+        <pre><code> 
+    &lt;form&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-1-4&quot;&gt;
+                    &lt;label class=&quot;select&quot;&gt;
+                        &lt;select id=&quot;select111&quot;&gt;
+                            &lt;option&gt;Select Field&lt;/option&gt;
+                            &lt;option value=&quot;1&quot;&gt;Option 01&lt;/option&gt;
+                            &lt;option value=&quot;2&quot;&gt;Option 02&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-1-4&quot;&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;fm1-title&quot; placeholder=&quot;Title&quot; value=&quot;Some data&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-1-4&quot;&gt;
+                    &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot; id=&quot;checkbox411&quot; checked&gt;
+                    &lt;label for=&quot;checkbox411&quot;&gt;Checkbox selected&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-1-4&quot;&gt;
+                    &lt;button class=&quot;btn-primary&quot;&gt;Button&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+        </pre></code>
 </body>
 
 </html>
